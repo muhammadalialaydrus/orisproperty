@@ -5,6 +5,10 @@ function stickyClass() {
 		$('.share-contact').toggleClass('hiding',
 			scroll >= $('footer').offset().top - 54
 		);
+		
+		$('.download-eflyer').toggleClass('hiding',
+			scroll >= $('footer').offset().top - 54
+		);
 	});
 }
 

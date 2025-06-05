@@ -2365,6 +2365,59 @@ body {
 	}
 }
 
+.download-eflyer {
+	position: fixed;
+	z-index: 2;
+	top: initial;
+	bottom: 100px;
+	left: initial;
+	right: 15px;
+	
+	@include breakpoint(tablet) {
+		bottom: 140px;
+		left: initial;
+		right: 20px;
+	}
+
+	@include breakpoint(small-mobile) {
+		bottom: 90px;
+	}
+
+	&.hiding {
+		display: none!important;
+	}
+
+	.wrapper-flyer {
+		a {
+			font-size: 1.1em;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			padding: 10px 16px;
+			background-color: rgba($white, 0.7);
+			border-radius: 50px;
+			backdrop-filter: saturate(180%) blur(20px);
+			box-shadow: 2px 4px 15px rgba($black, 0.15);
+
+			@include breakpoint(small-mobile) {
+				font-size: 1em;
+				padding: 8px 16px;
+				gap: 6px;
+			}
+
+			&:hover {
+				background-color: $gold;
+				color: $white;
+			}
+		}
+
+		.icon {
+			font-size: 1.3em;
+		}
+	}
+}
+
 .agent-contact {
 	.agent-box {
 		text-align: center;
