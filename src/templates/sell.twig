@@ -1,0 +1,75 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'sell-page full-cover' %}
+{% set head_title = 'Sell With Us' %}
+{% block page %}
+			<section class="sell-view">
+				<div class="background-image">
+					<div class="overlay"></div>
+					<figure>
+						<div class="images" style="background-image: url('assets/img/photos/thumb-deal.jpg');"></div>
+					</figure>
+				</div>
+				<div class="sell-content">
+					<div class="container">
+						<div class="row no-gutters">
+							<div class="col-md-8 col-lg-6">
+								<div class="title-page">
+									<h4 class="font-text-bold" data-aos="fade-right">Sell With Us</h4>
+								</div>
+								<div class="wording-content" data-aos="fade-up">
+									<article>
+										<p>
+											When selling your property, choosing the right agent is the most important decisions you’ll have to make.
+										</p>
+										<p>
+											At <strong>ORIS PROPERTY</strong> we have professional agents with experience, top negotiating skills, fast market expertise, loyal, honest and extensive marketing knowledge as well as full guidance through the legal maze and the selling process.
+										</p>
+									</article>
+								</div>
+								<div class="form-content" data-aos="fade-up">
+									<form action="" class="form" id="form-franchise">
+										<fieldset data-aos="fade-up">
+											{# <legend class="legend-field font-text-bold">Application Form</legend> #}
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="name-input-franchise">Title</label>
+													<select class="form-control" id="input-property-type-nav" name="input-property-type">
+														<option value="" class="placeholder" hidden>Title</option>
+														<option value="Rumah">Mr.</option>
+														<option value="Apartemen">Mrs.</option>
+														<option value="Tanah">Ms.</option>
+													</select>
+												</div>
+												<div class="form-group col-6">
+													<label for="name-input-franchise">Name</label>
+													<input type="text" class="form-control" id="name-input-franchise" name="name" placeholder="Name" required>
+												</div>
+												<div class="form-group col-6">
+													<label for="email-input-franchise">Email</label>
+													<input type="email" class="form-control" id="email-input-franchise" name="email" placeholder="Email Address" required>
+												</div>
+												<div class="form-group col-6">
+													<label for="phone-input-franchise">Phone</label>
+													<input type="number" class="form-control" id="phone-input-franchise" name="phone" placeholder="Phone Number" required>
+												</div>
+												<div class="form-group col-6">
+													<label for="subject-input-franchise">Subject</label>
+													<input type="text" class="form-control" id="subject-input-franchise" name="subject" placeholder="Subject" required>
+												</div>
+												<div class="form-group col-12">
+													<label for="message-input-franchise">Message</label>
+													<textarea class="form-control" id="message-input-franchise" name="message" placeholder="Massage" required></textarea>
+												</div>
+											</div>
+											<div class="button-area">
+												<button class="button full-width font-text-bold" type="submit">Submit</button>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+{% endblock %}

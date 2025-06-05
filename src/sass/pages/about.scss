@@ -1,0 +1,7 @@
+.about-view {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+}

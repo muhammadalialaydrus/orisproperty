@@ -1,0 +1,120 @@
+/**
+ * Variables
+ */
+
+ // FONT FAMILY
+$font_idx: 1;
+$font_default: Helvetica, Arial, sans-serif !default;
+$font-path:	"../assets/fonts" !default;
+
+// Fonts
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+// Transition
+$transition-base: all .3s ease-in-out;
+
+/**
+ * Typography Variables
+ */
+
+// Paragraph
+$paragraph-margin-bottom: 1rem;
+
+// Headings
+$headings-margin-bottom: 0;
+$headings-font-family: $font-family;
+$headings-font-weight: 500;
+$headings-line-height: inherit;
+$headings-color: inherit;
+
+// Headings Font Size
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+// Default color
+$blue: #2497D1;
+$dark-blue: #2a02b1;
+$transparent-blue: rgba($blue, 0.7);
+$white: #FFFFFF;
+$black: #000;
+$navy: #14283c;
+$gold: #c09e49;
+$dark-gold: #806728;
+$semi-dark-gold: #a17e2c;
+$semi-navy: #728098;
+$dark-navy: #253248;
+$light-blue: #F8FAFF;
+$green: #5AAA5B;
+$yellow: #FFE600;
+$tosca: #1db4bd;
+$orange: #df8618;
+$semi-orange: #ffc800;
+$purple: #8e1dbd;
+$pink: #dd3fac;
+$dark-pink: #bd1d8c;
+
+$red: #D12424;
+$grey: #444;
+$brown: #ab7d4e;
+$semi-brown: #ae957b;
+$transparent: transparent;
+
+// Links
+$title-color: $navy;
+$link-color: $navy;
+$link-decoration: none;
+$link-hover-color: $gold;
+$link-hover-decoration: underline;
+
+// Button
+$button-background: $navy;
+$button-hover-background: $gold;
+$button-color: $white;
+$button-hover-color: $white;
+
+$box-highlight: #5d5d5f;
+$body-background: $light-blue;
+$body-color: $semi-navy;
+$text: $body-color;
+
+// $footer-background: #CFE3ED;
+$footer-background: rgba($navy, 0.2);
+$footer-background-darker: $navy;
+
+// Social Media
+$facebook: #5d82d1;
+$twitter: #40bff5;
+$gplus: #d95946;
+$pinterest: #bd081c;
+$whatsapp: #5CB100;
+$youtube: #FF0000;
+
+
+// Media Query
+$media-query:
+	(imac-retina, (min-width: 2048px)),
+	(imac-large, (min-width: 1920px)),
+	(imac, (min-width: 1700px)),
+	(large-desktop, (min-width: 1500px)),
+	(laptop, (min-width: 1366px)),
+	(wide-laptop, (min-width: 1441px)),
+	(height-laptop, (max-height: 1200px)),
+	(desktop, (min-width: 1200px)),
+	(height-imac, (min-height: 1010px)),
+	(height-desktop, (min-height: 850px)),
+	(wide, (min-width: 992px)),
+	(width-tablet-landscape, (max-width: 1024px)),
+	(width-tablet, (max-width: 992px)),
+	(width-tablet-portrait, (max-width: 768px)),
+	(tablet, (min-width: 768px)),
+	(mobile, (max-width: 767px)),
+	(mobile-landscape, (min-width: 666px)),
+	(mobile-iphone, (max-width: 376px)),
+	(small-mobile, (max-width: 360px));
+

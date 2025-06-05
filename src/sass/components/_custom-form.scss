@@ -1,0 +1,166 @@
+.form {
+	.jcf-select {
+		border-radius: 8px;
+	}
+	
+	.form-control {
+		color: $body-color;
+		font-size: 12px;
+		line-height: 150%;
+		padding: 11px 12px;
+		height: auto;
+		border: 0;
+		background-color: $white;
+		outline: 0;
+		border-radius: 8px;
+
+		@include breakpoint(tablet) {
+			font-size: 14px;
+			line-height: 143%;
+			padding: 10px 16px;
+		}
+
+		&.price-currency {
+			text-align: left!important;
+
+			&::placeholder {
+				color: #a7b3c9;
+			}
+		}
+
+		&:focus {
+			box-shadow: none;	
+		}
+
+		&::placeholder {
+			color: #a7b3c9;
+			font-style: italic;
+		}
+	}
+
+	fieldset {
+		    padding: 10px 20px 30px;
+			border-radius: 8px;
+			
+			@include breakpoint(wide) {
+		    	padding: 20px 30px 40px;
+			}
+
+		& > legend {
+			font-size: 0.9em;
+			text-transform: uppercase;
+			line-height: 100%;
+			width: auto;
+			padding: 8px 16px 10px;
+			margin: 0;
+			
+			@include breakpoint(tablet) {
+				font-size: 1em;
+			}
+			
+			@include breakpoint(wide) {
+				font-size: 1.1em;
+			}
+		}
+
+		+ fieldset,
+		+ .button-area {
+			margin-top: 30px;
+		}
+	}
+
+	textarea {
+		&.form-control {
+			height: 160px;
+			resize: none;
+			border-radius: 8px;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: $body-color;
+	}
+
+	:-moz-placeholder {
+		color: $body-color;
+	}
+
+	::-moz-placeholder {
+		color: $body-color;
+	}
+
+	:-ms-input-placeholder {  
+		color: $body-color;
+	}
+
+	.form-group {
+		position: relative;
+		margin: 0;
+
+		label {
+			font-size: 0.8em;
+			line-height: 120%;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.9em;
+			}
+
+			&.label-form {
+				text-transform: uppercase;
+				color: $navy;
+			}
+		}
+
+		.form-check-label {
+			font-size: 12px;
+			vertical-align: middle;
+			
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+		}
+
+		&[class*="col-"] {
+			padding: 6px 5px;
+		}
+
+		&.has-error {
+			.icon-date {
+				top: 13px;
+				transform: none;
+			}
+		}
+	}
+
+	.wrapper-date {
+		position: relative;
+
+		.form-control {
+			padding-right: 34px;
+			
+			@include breakpoint(tablet) {
+				padding-right: 38px;
+			}
+		}
+
+		.icon-date {
+			pointer-events: none;
+			position: absolute;
+			top: 50%;
+			bottom: initial;
+			left: initial;
+			right: 12px;
+			transform: translate(0, -50%);
+			
+			@include breakpoint(tablet) {
+				right: 16px;
+			}
+		}
+	}
+
+	.form-row {
+		+ .button-area {
+			margin-top: 20px;
+		}
+	}
+}

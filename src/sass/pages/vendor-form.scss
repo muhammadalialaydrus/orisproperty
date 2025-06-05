@@ -1,0 +1,133 @@
+.vendor-form {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
+	.sales-name {
+		.row {
+			+ .row {
+				margin-top: 6px;
+			}
+		}
+
+		+ .form-content {
+			margin-top: 20px;
+		}
+
+		h6 {
+			line-height: 130%;
+		}
+	}
+	
+	.row-field {
+		.wrapper-field {
+			padding: 15px 0;
+		}
+
+		+ .button-area {
+			margin-top: 30px;
+		}
+	}
+
+	.form {
+		fieldset {
+			background-color: $white;
+			box-shadow: 2px 4px 20px rgba($black, 0.15);
+
+			& > legend {
+				color: $white;
+				background-color: $gold;
+				border-radius: 8px;
+			}
+		}
+
+		.form-check {
+			padding: 5px 0;
+		}
+
+		.jcf-select,
+		.form-control {
+			background-color: #eaeef5;
+		}
+
+		.jcf-radio,
+		.jcf-checkbox {
+			border: 0;
+			background-color: #eaeef5;
+
+			&.jcf-checked {
+				background-color: $gold;
+			}
+		}
+
+		.jcf-radio {
+			span {
+				background-color: $white;
+				top: 4px;
+				bottom: 4px;
+				left: 4px;
+				right: 4px;
+			}
+		}
+
+		.jcf-checkbox {
+			span {
+				border-color: $white;
+			}
+		}
+
+		.invalid-feedback {
+			color: $red;
+		}
+	}
+
+	.tnc  {
+		p {
+			font-size: 12px;
+			
+			@include breakpoint(tablet) {
+				font-size: 14px;
+			}
+
+			+ p {
+				margin-top: 4px;
+			}
+
+			+ .tnc-list {
+				margin-top: 6px;
+			}
+		}
+
+		.intro-tnc {
+			.tnc-list {
+				padding-left: 20px;
+			}
+
+			strong {
+				color: $navy;
+			}
+
+			+ .content-tnc {
+				margin-top: 20px;
+			}
+		}
+
+		.content-tnc {
+			+ .intro-tnc {
+				margin-top: 20px;
+			}
+		}
+
+		.tnc-list {
+			li {
+				font-size: 12px;
+			
+				@include breakpoint(tablet) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

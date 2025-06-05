@@ -1,0 +1,544 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'agent-detail-page' %}
+{% set head_title = 'Agent Detail' %}
+{% block page %}
+			<section class="agent-detail-listing">
+				<div class="container-fluid">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="fade-right">Muralino Sapta Nughara</h4>
+					</div>
+					<div class="agent-detail-content">
+						<div class="wrapper">
+							<div class="row justify-content-center">
+								<div class="col-lg-8 col-xl-9 side-left">
+									<div class="properties-content">
+										<div class="wrapper">
+											<div class="row justify-content-start">
+												{# <div class="empty-space">
+													<div class="empty-wrapper" data-aos="zoom-in">
+														<i class="fas fa-box-open"></i>
+														<p>No Listing</p>
+													</div>
+												</div> #}
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag orange top-left font-text-bold">Rent</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Luxurious Modern Design</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag orange top-left font-text-bold">Rent</span>
+																	<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Tamarind Lane</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_17.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Luxurious Classic Design</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_16.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Tamarind Lane</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Luxurious Modern Design</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Tamarind Lane</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_17.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Luxurious Classic Design</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag green top-left font-text-bold">Sell</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Luxurious Modern Design</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-xl-4">
+													<div class="thumb" data-aos="zoom-in">
+														<div class="box">
+															<div class="image-area">
+																<a href="property-detail.html">
+																	<figure>
+																		<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+																	</figure>
+																	<span class="badge-tag orange top-left font-text-bold">Rent</span>
+																	<span class="badge-tag blue bottom-right font-text-bold">House</span>
+																</a>
+															</div>
+															<div class="info-area">
+																<div class="wrapper-info">
+																	<p class="city font-text-medium">
+																		<span class="fa fa-map-marker-alt"></span>
+																		Kuningan, Jakarta Selatan
+																	</p>
+																	<h4 class="title font-text-bold">
+																		<a href="property-detail.html">Tamarind Lane</a>
+																	</h4>
+																	<ul class="flat facilities">
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																			<span class="fa fa-vector-square"></span>
+																			<p class="font-text-medium">160 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																			<span class="fa fa-building"></span>
+																			<p class="font-text-medium">240 m<sup>2</sup></p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																			<span class="fa fa-bed"></span>
+																			<p class="font-text-medium">4</p>
+																		</li>
+																		<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																			<span class="fa fa-bath"></span>
+																			<p class="font-text-medium">2</p>
+																		</li>
+																	</ul>
+																	<h3 class="price font-text-bold">
+																		<sup>IDR</sup>160<sub>.000.000.000</sub>
+																	</h3>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="pagination justify-content-center">
+										<li class="page-item disabled" data-aos="zoom-in">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-angle-left"></i></a>
+										</li>
+										<li class="page-item active" data-aos="zoom-in">
+											<a class="page-link" href="#">1</a>
+										</li>
+										<li class="page-item" data-aos="zoom-in">
+											<a class="page-link" href="#">2</a>
+										</li>
+										<li class="page-item" data-aos="zoom-in">
+											<a class="page-link" href="#">3</a>
+										</li>
+										<li class="page-item" data-aos="zoom-in">
+											<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-7 col-lg-4 col-xl-3 side-right show-desktop">
+									<div class="agent-contact">
+										<div class="agent-contact-wrapper">
+											<div class="agent-box" data-aos="zoom-in">
+												<div class="avatar-area">
+													<div class="avatar">
+														<figure>
+															<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+														</figure>
+													</div>
+													<ul class="flat social-media">
+														<li>
+															<a href="#">
+																<span class="fab fa-instagram"></span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span class="far fa-envelope"></span>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="name-area">
+													<h5 class="font-text-bold">Muralino Sapta Nughara</h5>
+													<p>Real Estate Agent</p>
+												</div>
+												<div class="show-number">
+													<h6>
+														Show Number
+														<span class="fa fa-angle-down"></span>
+													</h6>
+													<h5 class="number font-text-bold">
+														<a href="#">+62 812 1232 3213</a>
+													</h5>
+												</div>
+												<ul class="flat button-area">
+													{# <li>
+														<a href="#" class="button full-width full-rounded font-text-bold">Call</a>
+													</li> #}
+													<li>
+														<a href="#" class="button whatsapp full-width font-text-bold">Whatsapp</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="share-contact show-mobile" data-aos="zoom-in" data-aos-delay="600">
+								<div class="wrapper-share">
+									<div class="profile-pic">
+										<figure>
+											<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+										</figure>
+									</div>
+									<div class="name-area">
+										<h5 class="font-text-bold">Muralino Sapta Nughara</h5>
+										<p>Real Estate Agent</p>
+									</div>
+									<div class="button-area">
+										<div class="button-list call-mobile">
+											<a href="#" class="button icon-button full-rounded full-width font-text-bold">
+												<span class="fas fa-phone-alt"></span>
+											</a>
+										</div>
+										<div class="button-list whatsapp-mobile">
+											<a href="#" class="button icon-button full-rounded full-width font-text-bold">
+												<span class="fab fa-whatsapp"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+{% endblock %}

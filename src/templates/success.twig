@@ -1,0 +1,22 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'success-page' %}
+{% set head_title = 'Success' %}
+{% block page %}
+			<section class="not-found">
+				<div class="container">
+					<div class="title-not-found">
+						<!-- <h4 class="font-text-black" data-aos="zoom-in">Oops!</h4> -->
+						<h4 class="font-text-black" data-aos="zoom-in">Yay!</h4>
+					</div>
+					<div class="content-not-found">
+						<div class="text-area">
+							<h5 class="font-text-bold" data-aos="zoom-in">Form Success</h5>
+							<p data-aos="zoom-in">Thank you for your submission, we will call you back later.</p>
+						</div>
+						<div class="button-area" data-aos="zoom-in">
+							<a href="index.html" class="button full-rounded font-text-bold">Go to Homepage</a>
+						</div>
+					</div>
+				</div>
+			</section>
+{% endblock %}

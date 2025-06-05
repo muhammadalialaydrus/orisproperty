@@ -1,0 +1,145 @@
+.sell-view {
+	position: relative;
+	min-height: 100vh;
+	padding-top: 74px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 80px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.background-image {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.overlay {
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba($black, 0.15);
+		}
+
+		figure {
+			width: 100%;
+			height: 100%;
+		}
+
+		.images {
+			width: 100%;
+			height: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	.sell-content {
+		padding-top: 50px;
+	}
+
+	.title-page {
+		h4 {
+			color: $white;
+			text-shadow: 2px 4px 30px rgba(0,0,0,0.3);
+		}
+	}
+
+	.wording-content {
+		color: $white;
+		text-shadow: 2px 4px 30px rgba(0,0,0,0.3);
+
+		+ .form-content,
+		+ .contact-content {
+			margin-top: 40px;
+		}
+	}
+
+	.form {
+		fieldset {
+			padding: 20px 16px 30px;
+			background-color: rgba($white, 0.5);
+			box-shadow: 2px 10px 40px rgba($black, 0.2);
+			backdrop-filter: saturate(180%) blur(20px);
+			
+			@include breakpoint(tablet) {
+				padding: 30px 30px 40px;
+			}
+
+			& > legend {
+				color: $white;
+				background-color: $navy;
+				border-radius: 30px;
+			}
+		}
+
+		.form-group {
+			label {
+				color: $title-color;
+				vertical-align: middle;
+			}
+		}
+
+		.form-check {
+			padding: 5px 0;
+		}
+
+		.jcf-select,
+		.form-control {
+			background-color: $white;
+			box-shadow: 2px 2px 10px rgba($black, 0.15);
+		}
+
+		.jcf-radio,
+		.jcf-checkbox {
+			border: 0;
+			background-color: $white;
+
+			&.jcf-checked {
+				background-color: $blue;
+			}
+		}
+
+		.jcf-radio {
+			span {
+				background-color: $white;
+				top: 4px;
+				bottom: 4px;
+				left: 4px;
+				right: 4px;
+			}
+		}
+
+		.jcf-checkbox {
+			span {
+				border-color: $white;
+			}
+		}
+
+		.invalid-feedback {
+			color: $red;
+		}
+
+		.button {
+			background-color: $button-background;
+			border-color: $button-background;
+			box-shadow: 2px 2px 10px rgba($black, 0.15);
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: $button-hover-background;
+					border-color: $button-hover-background;
+				}
+			}
+		}
+	}
+}

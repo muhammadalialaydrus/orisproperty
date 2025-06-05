@@ -1,0 +1,585 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'best-deal-page' %}
+{% set head_title = 'Best Deal' %}
+{% block page %}
+			<nav class="filter-navbar">
+				<div class="container-fluid" data-aos="fade-in">
+					<form action="">
+						<div class="wrapper">
+							<ul class="flat side-left">
+								<li>
+									<div class="search-nav">
+										<input type="text" class="form-control simple-search" placeholder="Search...">
+										<button class="button with-icon full-rounded" type="submit">
+											<span class="fa fa-search"></span>
+										</button>
+									</div>
+								</li>
+								<li class="show-desktop">
+									<div class="form-group">
+										<select class="form-control" id="input-property-type-nav" name="input-property-type">
+											<option value="" class="placeholder" hidden>Property Type</option>
+											<option value="Rumah">Rumah</option>
+											<option value="Apartemen">Apartemen</option>
+											<option value="Tanah">Tanah</option>
+										</select>
+									</div>
+								</li>
+								<li class="show-desktop">
+									<div class="form-group">
+										<select class="form-control" id="input-bedroom-nav" name="input-bedroom">
+											<option value="" class="placeholder" hidden>Bedroom</option>
+											<option value="1 Bedroom">1 Bedroom</option>
+											<option value="2 Bedroom">2 Bedroom</option>
+											<option value="3 Bedroom">3 Bedroom</option>
+											<option value="4 Bedroom">4 Bedroom</option>
+										</select>
+									</div>
+								</li>
+								<li class="show-desktop">
+									<div class="form-group">
+										<select class="form-control" id="input-bathroom-nav" name="input-bathroom">
+											<option value="" class="placeholder" hidden>Bathroom</option>
+											<option value="1 Bathroom">1 Bathroom</option>
+											<option value="2 Bathroom">2 Bathroom</option>
+											<option value="3 Bathroom">3 Bathroom</option>
+											<option value="4 Bathroom">4 Bathroom</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+							<ul class="flat side-right">
+								<li class="show-desktop">
+									<div class="form-group">
+										<select class="form-control" id="input-bedroom-nav" name="input-bedroom">
+											<option value="" class="placeholder" hidden>Sort</option>
+											<option value="Newest">Newest</option>
+											<option value="Lowest">Price: Lowest</option>
+											<option value="Highest">Price: Highest</option>
+										</select>
+									</div>
+								</li>
+								{# <li>
+									<button type="button" class="button button-filter full-rounded" data-toggle="modal" data-target="#modal-filter">
+										<span class="fas fa-sliders-h"></span>
+										Filter
+									</button>
+								</li> #}
+							</ul>
+						</div>
+					</form>
+				</div>
+			</nav>
+			<section class="properties-listing">
+				<div class="container">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="fade-right">Best Deal</h4>
+					</div>
+					<div class="properties-content">
+						<div class="wrapper">
+							<div class="row">
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+													</figure>
+													<span class="badge-tag green top-left font-text-bold">Sale</span>
+													<span class="badge-tag blue bottom-right font-text-bold">House</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Luxurious Modern Design</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+													</figure>
+													<span class="badge-tag green top-left font-text-bold">Sale</span>
+													<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Tamarind Lane</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_17.jpg');"></div>
+													</figure>
+													<span class="badge-tag orange top-left font-text-bold">Rent</span>
+													<span class="badge-tag blue bottom-right font-text-bold">House</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Luxurious Classic Design</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_16.jpg');"></div>
+													</figure>
+													<span class="badge-tag orange top-left font-text-bold">Rent</span>
+													<span class="badge-tag blue bottom-right font-text-bold">House</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Tamarind Lane</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+													</figure>
+													<span class="badge-tag orange top-left font-text-bold">Rent</span>
+													<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Luxurious Modern Design</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+													</figure>
+													<span class="badge-tag green top-left font-text-bold">Sale</span>
+													<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Tamarind Lane</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_17.jpg');"></div>
+													</figure>
+													<span class="badge-tag orange top-left font-text-bold">Rent</span>
+													<span class="badge-tag blue bottom-right font-text-bold">House</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Luxurious Classic Design</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_13.jpg');"></div>
+													</figure>
+													<span class="badge-tag orange top-left font-text-bold">Rent</span>
+													<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Luxurious Modern Design</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-4">
+									<div class="thumb" data-aos="zoom-in">
+										<div class="box">
+											<div class="image-area">
+												<a href="best-deal-detail.html">
+													<figure>
+														<div class="images" style="background-image: url('assets/img/photos/image_15.jpg');"></div>
+													</figure>
+													<span class="badge-tag green top-left font-text-bold">Sale</span>
+													<span class="badge-tag blue bottom-right font-text-bold">House</span>
+													<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+												</a>
+											</div>
+											<div class="info-area">
+												<div class="wrapper-info">
+													<p class="city font-text-medium">
+														<span class="fa fa-map-marker-alt"></span>
+														Kuningan, Jakarta Selatan
+													</p>
+													<h4 class="title font-text-bold">
+														<a href="best-deal-detail.html">Tamarind Lane</a>
+													</h4>
+													<ul class="flat facilities">
+														<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+															<span class="fa fa-vector-square"></span>
+															<p class="font-text-medium">160 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+															<span class="fa fa-building"></span>
+															<p class="font-text-medium">240 m<sup>2</sup></p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+															<span class="fa fa-bed"></span>
+															<p class="font-text-medium">4</p>
+														</li>
+														<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+															<span class="fa fa-bath"></span>
+															<p class="font-text-medium">2</p>
+														</li>
+													</ul>
+													<h6 class="price-discount font-text-bold">
+														<span>
+															<sup>IDR</sup>168<sub>.000.000.000</sub>
+														</span>
+													</h6>
+													<h3 class="price font-text-bold">
+														<sup>IDR</sup>160<sub>.000.000.000</sub>
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled" data-aos="zoom-in">
+							<a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-angle-left"></i></a>
+						</li>
+						<li class="page-item active" data-aos="zoom-in">
+							<a class="page-link" href="#">1</a>
+						</li>
+						<li class="page-item" data-aos="zoom-in">
+							<a class="page-link" href="#">2</a>
+						</li>
+						<li class="page-item" data-aos="zoom-in">
+							<a class="page-link" href="#">3</a>
+						</li>
+						<li class="page-item" data-aos="zoom-in">
+							<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<div class="floating-button" data-aos="zoom-in-left" data-aos-delay="600">
+				<a class="font-text-bold" href="sell.html">
+					Sell With Us
+				</a>
+			</div>
+{% endblock %}

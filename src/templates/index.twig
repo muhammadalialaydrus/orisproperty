@@ -1,0 +1,776 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'index' %}
+{% set head_title = 'Home' %}
+{% block page %}
+			<section class="cover">
+				<div class="cover-slider">
+					{# <div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="content-swipe">
+									<div class="slide-image">
+										<figure>
+											<div class="images" data-aos="fade-in" style="background-image: url('assets/img/photos/image_5.jpg');"></div>
+										</figure>
+									</div>
+									<div class="slide-info" data-aos="zoom-in" data-aos-delay="600">
+										<p class="city">
+											<span class="fa fa-map-marker-alt"></span>
+											Kuningan, Jakarta Selatan
+										</p>
+										<h4 class="title font-text-bold">Luxurious Modern Design</h4>
+										<h3 class="price font-text-bold">
+											<sup>IDR</sup>160<sub>.000.000.000</sub>
+										</h3>
+										<a href="property-detail.html" class="button white outline full-rounded font-text-bold">View Detail</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="content-swipe">
+									<div class="slide-image">
+										<figure>
+											<div class="images" data-aos="fade-in" style="background-image: url('assets/img/photos/image_2.jpg');"></div>
+										</figure>
+									</div>
+									<div class="slide-info" data-aos="zoom-in" data-aos-delay="600">
+										<p class="city">
+											<span class="fa fa-map-marker-alt"></span>
+											Kuningan, Jakarta Selatan
+										</p>
+										<h4 class="title font-text-bold">Luxurious Classic Design</h4>
+										<h3 class="price font-text-bold">
+											<sup>IDR</sup>160<sub>.000.000.000</sub>
+										</h3>
+										<a href="property-detail.html" class="button white outline full-rounded font-text-bold">View Detail</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="content-swipe">
+									<div class="slide-image">
+										<figure>
+											<div class="images" data-aos="fade-in" style="background-image: url('assets/img/photos/image_4.jpg');"></div>
+										</figure>
+									</div>
+									<div class="slide-info" data-aos="zoom-in" data-aos-delay="600">
+										<p class="city">
+											<span class="fa fa-map-marker-alt"></span>
+											Kuningan, Jakarta Selatan
+										</p>
+										<h4 class="title font-text-bold">Luxurious Modern Design</h4>
+										<h3 class="price font-text-bold">
+											<sup>IDR</sup>160<sub>.000.000.000</sub>
+										</h3>
+										<a href="property-detail.html" class="button white outline full-rounded font-text-bold">View Detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="navigation-wrapper" data-aos="zoom-in" data-aos-delay="600">
+							<div class="swiper-custom-arrow swiper-button-prev"></div>
+							<div class="swiper-custom-arrow swiper-button-next"></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div> #}
+				</div>
+				<div class="search-property">
+					<div class="wrapper" data-aos="zoom-in" data-aos-delay="600">
+						<form action="">
+							<div class="navigation-search">
+								<div class="radio-wrapper">
+									<div class="radio-button">
+										<input type="radio" name="buy-rent" checked="checked" id="buy-option"/>
+										<label class="label-button font-text-bold" title="Buy" for="buy-option">Buy</label>
+									</div>
+									<div class="radio-button">
+										<input type="radio" name="buy-rent" id="rent-option"/>
+										<label class="label-button font-text-bold" title="Rent" for="rent-option">Rent</label>
+									</div>
+								</div>
+							</div>
+							<div class="input-search">
+								<div class="input-wrapper">
+									<span class="icon fa fa-map-marker-alt"></span>
+									<input type="text" name="input_city" class="form-control simple-search"  id="home-search" placeholder="Search City..." autocomplete="off">
+									<input type="hidden" name="input_city_hidden" id="home-search-hidden">
+									<div class="button-search-area">
+										{# <button type="button" class="advance-search font-text-medium" data-toggle="collapse" data-target="#advance-area" aria-expanded="false" aria-controls="advance-area">
+											Advanced
+											<span class="fa fa-angle-down"></span>
+										</button> #}
+										<button type="button" class="advance-search font-text-medium" data-toggle="modal" data-target="#modal-advanced-search">
+											Advanced
+											<span class="fa fa-angle-right"></span>
+										</button>
+										<button class="button with-icon" type="submit">
+											<span class="fa fa-search"></span>
+										</button>
+									</div>
+								</div>
+								{# <div class="advance-area collapse" id="advance-area">
+									<div class="advance-wrapper">
+										<div class="form-row">
+											<div class="form-group col-6">
+												<select class="form-control" id="input-bedroom" name="input-bedroom">
+													<option value="" class="placeholder" hidden>Bedroom</option>
+													<option value="1 Bedroom">1 Bedroom</option>
+													<option value="2 Bedroom">2 Bedroom</option>
+													<option value="3 Bedroom">3 Bedroom</option>
+													<option value="4 Bedroom">4 Bedroom</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-bathroom" name="input-bathroom">
+													<option value="" class="placeholder" hidden>Bathroom</option>
+													<option value="1 Bathroom">1 Bathroom</option>
+													<option value="2 Bathroom">2 Bathroom</option>
+													<option value="3 Bathroom">3 Bathroom</option>
+													<option value="4 Bathroom">4 Bathroom</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-transaction" name="input-transaction">
+													<option value="" class="placeholder" hidden>Transaction</option>
+													<option value="Buy">Buy</option>
+													<option value="Rent">Rent</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-property-type" name="input-property-type">
+													<option value="" class="placeholder" hidden>Property Type</option>
+													<option value="Rumah">Rumah</option>
+													<option value="Apartemen">Apartemen</option>
+													<option value="Tanah">Tanah</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-province" name="input-province">
+													<option value="" class="placeholder" hidden>Province</option>
+													<option value="DKI Jakarta">DKI Jakarta</option>
+													<option value="Jawa Barat">Jawa Barat</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-city" name="input-city">
+													<option value="" class="placeholder" hidden>City</option>
+													<option value="Jakarta Timur">Jakarta Timur</option>
+													<option value="Jakarta Selatan">Jakarta Selatan</option>
+													<option value="Jakarta Barat">Jakarta Barat</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<input class="form-control price-currency min" id="min-price" name="min-price" placeholder="Min Price">
+											</div>
+											<div class="form-group col-6">
+												<input class="form-control price-currency max" id="max-price" name="max-price" placeholder="Max Price">
+											</div>
+										</div>
+										<button class="button full-width font-text-bold" type="submit">Search</button>
+									</div>
+								</div> #}
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="wording text-center">
+				<div class="row no-gutters justify-content-center">
+					<div class="col-11 col-md-8 col-lg-6 col-xl-5">
+						<div class="wrapper">
+							<h3 class="font-text-bold" data-aos="fade-up">We are a Real Estate Agent based in South Jakarta</h3>
+							<p data-aos="fade-up" data-aos-delay="300">Take a deep dive and browse homes for sale, original neighborhood photos, resident reviews and local insights to find what is right for you.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="thumbnails slider">
+				<div class="title-section">
+					<div class="container">
+						<div class="wrapper">
+							<h4 class="font-text-bold" data-aos="fade-right">Best Deal</h4>
+							<div class="link-nav" data-aos="fade-left">
+								<a href="best-deal.html" class="cta font-text-bold">
+									<span>View All</span>
+									<span class="icon-arrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-section">
+					<div class="container">
+						<div class="thumbnail-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="thumb" data-aos="zoom-in">
+											<div class="box">
+												<div class="vid-area">
+													<div class="vid-thumb">
+														<div class="vid-box">
+															<div class="customPlayer sliderStyle" data-property="{
+																videoURL:'oz8wjtUGJOA',
+																containment:'self',
+																showControls:false,
+																loop:true,
+																mute:true,
+																startAt:10,
+																stopAt:16,
+																cc_load_policy:false,
+																showYTLogo:false,
+																optimizeDisplay:false,
+																coverImage:'assets/img/photos/image_20.jpg'
+															}"></div>
+															<span class="badge-tag large-tag green top-left font-text-bold">Sale</span>
+															<span class="badge-tag blue bottom-right font-text-bold">House</span>
+															<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+															<a class="click-area" href="property-detail.html"></a>
+														</div>
+													</div>
+												</div>
+												<div class="info-area">
+													<div class="wrapper-info">
+														<p class="city font-text-medium">
+															<span class="fa fa-map-marker-alt"></span>
+															Kuningan, Jakarta Selatan
+														</p>
+														<h4 class="title font-text-bold">
+															<a href="property-detail.html">Tamarind Lane</a>
+														</h4>
+														<ul class="flat facilities">
+															<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																<span class="fa fa-vector-square"></span>
+																<p class="font-text-medium">160 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																<span class="fa fa-building"></span>
+																<p class="font-text-medium">240 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																<span class="fa fa-bed"></span>
+																<p class="font-text-medium">4</p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																<span class="fa fa-bath"></span>
+																<p class="font-text-medium">2</p>
+															</li>
+														</ul>
+														<h6 class="price-discount font-text-bold">
+															<span>
+																<sup>IDR</sup>168<sub>.000.000.000</sub>
+															</span>
+														</h6>
+														<h3 class="price font-text-bold">
+															<sup>IDR</sup>160<sub>.000.000.000</sub>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="thumb" data-aos="zoom-in">
+											<div class="box">
+												<div class="vid-area">
+													<div class="vid-thumb">
+														<div class="vid-box">
+															<div class="customPlayer sliderStyle" data-property="{
+																videoURL:'https://www.youtube.com/watch?v=7l_DXTM7X5A',
+																containment:'self',
+																showControls:false,
+																loop:true,
+																mute:true,
+																startAt:10,
+																stopAt:16,
+																cc_load_policy:false,
+																showYTLogo:false,
+																optimizeDisplay:false,
+																coverImage:'assets/img/photos/image_21.jpg'
+															}"></div>
+															<span class="badge-tag large-tag green top-left font-text-bold">Sale</span>
+															<span class="badge-tag blue bottom-right font-text-bold">House</span>
+															<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+															<a class="click-area" href="property-detail.html"></a>
+														</div>
+													</div>
+												</div>
+												<div class="info-area">
+													<div class="wrapper-info">
+														<p class="city font-text-medium">
+															<span class="fa fa-map-marker-alt"></span>
+															Kuningan, Jakarta Selatan
+														</p>
+														<h4 class="title font-text-bold">
+															<a href="property-detail.html">Tamarind Lane</a>
+														</h4>
+														<ul class="flat facilities">
+															<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																<span class="fa fa-vector-square"></span>
+																<p class="font-text-medium">160 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																<span class="fa fa-building"></span>
+																<p class="font-text-medium">240 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																<span class="fa fa-bed"></span>
+																<p class="font-text-medium">4</p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																<span class="fa fa-bath"></span>
+																<p class="font-text-medium">2</p>
+															</li>
+														</ul>
+														<h6 class="price-discount font-text-bold">
+															<span>
+																<sup>IDR</sup>168<sub>.000.000.000</sub>
+															</span>
+														</h6>
+														<h3 class="price font-text-bold">
+															<sup>IDR</sup>160<sub>.000.000.000</sub>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="thumb sold" data-aos="zoom-in">
+											<div class="box">
+												<div class="vid-area">
+													<div class="vid-thumb">
+														<div class="vid-box">
+															<div class="customPlayer sliderStyle" data-property="{
+																videoURL:'https://www.youtube.com/watch?v=Q9OI28kTeTA',
+																containment:'self',
+																showControls:false,
+																loop:true,
+																mute:true,
+																startAt:10,
+																stopAt:16,
+																cc_load_policy:false,
+																showYTLogo:false,
+																optimizeDisplay:false,
+																coverImage:'assets/img/photos/image_22.jpg'
+															}"></div>
+															<span class="badge-tag large-tag green top-left font-text-bold">Sale</span>
+															<span class="badge-tag blue bottom-right font-text-bold">House</span>
+															<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+															<span class="badge-tag sold-tag red font-text-bold">Sold</span>
+															<a class="click-area" href="property-detail.html"></a>
+														</div>
+													</div>
+												</div>
+												<div class="info-area">
+													<div class="wrapper-info">
+														<p class="city font-text-medium">
+															<span class="fa fa-map-marker-alt"></span>
+															Kuningan, Jakarta Selatan
+														</p>
+														<h4 class="title font-text-bold">
+															<a href="property-detail.html">Tamarind Lane</a>
+														</h4>
+														<ul class="flat facilities">
+															<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																<span class="fa fa-vector-square"></span>
+																<p class="font-text-medium">160 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																<span class="fa fa-building"></span>
+																<p class="font-text-medium">240 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																<span class="fa fa-bed"></span>
+																<p class="font-text-medium">4</p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																<span class="fa fa-bath"></span>
+																<p class="font-text-medium">2</p>
+															</li>
+														</ul>
+														<h6 class="price-discount font-text-bold">
+															<span>
+																<sup>IDR</sup>168<sub>.000.000.000</sub>
+															</span>
+														</h6>
+														<h3 class="price font-text-bold">
+															<sup>IDR</sup>160<sub>.000.000.000</sub>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="thumb" data-aos="zoom-in">
+											<div class="box">
+												<div class="image-area">
+													<a href="property-detail.html">
+														<figure>
+															<div class="images" style="background-image: url('assets/img/photos/image_8.jpg');"></div>
+														</figure>
+														<span class="badge-tag large-tag orange top-left font-text-bold">Rent</span>
+														<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+														<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+													</a>
+												</div>
+												<div class="info-area">
+													<div class="wrapper-info">
+														<p class="city font-text-medium">
+															<span class="fa fa-map-marker-alt"></span>
+															Kuningan, Jakarta Selatan
+														</p>
+														<h4 class="title font-text-bold">
+															<a href="property-detail.html">Tamarind Lane</a>
+														</h4>
+														<ul class="flat facilities">
+															<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																<span class="fa fa-vector-square"></span>
+																<p class="font-text-medium">160 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																<span class="fa fa-building"></span>
+																<p class="font-text-medium">240 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																<span class="fa fa-bed"></span>
+																<p class="font-text-medium">4</p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																<span class="fa fa-bath"></span>
+																<p class="font-text-medium">2</p>
+															</li>
+														</ul>
+														<h6 class="price-discount font-text-bold">
+															<span>
+																<sup>IDR</sup>168<sub>.000.000.000</sub>
+															</span>
+														</h6>
+														<h3 class="price font-text-bold">
+															<sup>IDR</sup>160<sub>.000.000.000</sub>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="thumb" data-aos="zoom-in">
+											<div class="box">
+												<div class="image-area">
+													<a href="property-detail.html">
+														<figure>
+															<div class="images" style="background-image: url('assets/img/photos/image_9.jpg');"></div>
+														</figure>
+														<span class="badge-tag large-tag green top-left font-text-bold">Sale</span>
+														<span class="badge-tag tosca bottom-right font-text-bold">Apartment</span>
+														<span class="badge-tag best-tag orange-black font-text-bold">Best Deal</span>
+													</a>
+												</div>
+												<div class="info-area">
+													<div class="wrapper-info">
+														<p class="city font-text-medium">
+															<span class="fa fa-map-marker-alt"></span>
+															Kuningan, Jakarta Selatan
+														</p>
+														<h4 class="title font-text-bold">
+															<a href="property-detail.html">Tamarind Lane</a>
+														</h4>
+														<ul class="flat facilities">
+															<li data-toggle="tooltip" data-placement="top" title="Luas Tanah">
+																<span class="fa fa-vector-square"></span>
+																<p class="font-text-medium">160 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Luas Bangunan">
+																<span class="fa fa-building"></span>
+																<p class="font-text-medium">240 m<sup>2</sup></p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Tidur">
+																<span class="fa fa-bed"></span>
+																<p class="font-text-medium">4</p>
+															</li>
+															<li data-toggle="tooltip" data-placement="top" title="Kamar Mandi">
+																<span class="fa fa-bath"></span>
+																<p class="font-text-medium">2</p>
+															</li>
+														</ul>
+														<h6 class="price-discount font-text-bold">
+															<span>
+																<sup>IDR</sup>168<sub>.000.000.000</sub>
+															</span>
+														</h6>
+														<h3 class="price font-text-bold">
+															<sup>IDR</sup>160<sub>.000.000.000</sub>
+														</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="navigation-wrapper" data-aos="fade-in">
+									<div class="swiper-custom-arrow swiper-button-prev"></div>
+									<div class="swiper-custom-arrow swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="agents">
+				<div class="title-section">
+					<div class="container">
+						<div class="wrapper">
+							<h4 class="font-text-bold" data-aos="fade-right">Our Agents</h4>
+							<div class="link-nav" data-aos="fade-left">
+								<a href="agents.html" class="cta font-text-bold">
+									<span>View All</span>
+									<span class="icon-arrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-section margin-top">
+					<div class="container">
+						<div class="agent-list text-center">
+							<div class="row justify-content-center">
+								<div class="col-6 col-md-3" data-aos="zoom-in">
+									<div class="image-area">
+										<figure>
+											<a href="agent-detail.html">
+												<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+											</a>
+										</figure>
+									</div>
+									<div class="name-area">
+										<h5 class="font-text-bold">
+											<a href="agent-detail.html">Omar Noviardi</a>
+										</h5>
+										<p>Principal</p>
+									</div>
+									<ul class="contact-area flat">
+										<li class="contact-list">
+											<a href="#">
+												<span class="fa fa-whatsapp"></span>
+											</a>
+										</li>
+										<li class="contact-list">
+											<a href="#">
+												<span class="far fa-envelope"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3" data-aos="zoom-in">
+									<div class="image-area">
+										<figure>
+											<a href="agent-detail.html">
+												<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+											</a>
+										</figure>
+									</div>
+									<div class="name-area">
+										<h5 class="font-text-bold">
+											<a href="agent-detail.html">Amrina Alwis</a>
+										</h5>
+										<p>Agent</p>
+									</div>
+									<ul class="contact-area flat">
+										<li class="contact-list">
+											<a href="#">
+												<span class="fa fa-whatsapp"></span>
+											</a>
+										</li>
+										<li class="contact-list">
+											<a href="#">
+												<span class="far fa-envelope"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3" data-aos="zoom-in">
+									<div class="image-area">
+										<figure>
+											<a href="agent-detail.html">
+												<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+											</a>
+										</figure>
+									</div>
+									<div class="name-area">
+										<h5 class="font-text-bold">
+											<a href="agent-detail.html">Willy Suib</a>
+										</h5>
+										<p>Agent</p>
+									</div>
+									<ul class="contact-area flat">
+										<li class="contact-list">
+											<a href="#">
+												<span class="fa fa-whatsapp"></span>
+											</a>
+										</li>
+										<li class="contact-list">
+											<a href="#">
+												<span class="far fa-envelope"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-6 col-md-3" data-aos="zoom-in">
+									<div class="image-area">
+										<figure>
+											<a href="agent-detail.html">
+												<div class="images" style="background-image: url('assets/img/graphics/dummy_person.png');"></div>
+											</a>
+										</figure>
+									</div>
+									<div class="name-area">
+										<h5 class="font-text-bold">
+											<a href="agent-detail.html">Irfan Dadi</a>
+										</h5>
+										<p>Agent</p>
+									</div>
+									<ul class="contact-area flat">
+										<li class="contact-list">
+											<a href="#">
+												<span class="fa fa-whatsapp"></span>
+											</a>
+										</li>
+										<li class="contact-list">
+											<a href="#">
+												<span class="far fa-envelope"></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="projects">
+				<div class="title-section">
+					<div class="container">
+						<div class="wrapper">
+							<h4 class="font-text-bold" data-aos="fade-right">Projects</h4>
+							<div class="link-nav" data-aos="fade-left">
+								<a href="project.html" class="cta font-text-bold">
+									<span>View All</span>
+									<span class="icon-arrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-section margin-top">
+					<div class="container">
+						<div class="project-slider">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="content-swipe">
+											<div class="slide-image">
+												<a href="project-detail.html">
+													<figure>
+														<div class="images" data-aos="zoom-in" style="background-image: url('assets/img/photos/image_10.jpg');"></div>
+													</figure>
+												</a>
+											</div>
+											<div class="slide-info" data-aos="zoom-in">
+												<p class="city">
+													<span class="fa fa-map-marker-alt"></span>
+													Cihampelas, Bandung
+												</p>
+												<h4 class="title font-text-bold">
+													<a href="project-detail.html">Bandung Resort Extension</a>
+												</h4>
+												<p class="startfrom">Start From</p>
+												<h3 class="price font-text-bold">
+													<sup>IDR</sup>160<sub>.000.000.000</sub>
+												</h3>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="content-swipe">
+											<div class="slide-image">
+												<a href="project-detail.html">
+													<figure>
+														<div class="images" data-aos="zoom-in" style="background-image: url('assets/img/photos/image_11.jpg');"></div>
+													</figure>
+												</a>
+											</div>
+											<div class="slide-info" data-aos="zoom-in">
+												<p class="city">
+													<span class="fa fa-map-marker-alt"></span>
+													Rungkut, Surabaya
+												</p>
+												<h4 class="title font-text-bold">
+													<a href="project-detail.html">Surabaya Resort Extension</a>
+												</h4>
+												<p class="startfrom">Start From</p>
+												<h3 class="price font-text-bold">
+													<sup>IDR</sup>160<sub>.000.000.000</sub>
+												</h3>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="content-swipe">
+											<div class="slide-image">
+												<a href="project-detail.html">
+													<figure>
+														<div class="images" data-aos="zoom-in" style="background-image: url('assets/img/photos/image_9.jpg');"></div>
+													</figure>
+												</a>
+											</div>
+											<div class="slide-info" data-aos="zoom-in">
+												<p class="city">
+													<span class="fa fa-map-marker-alt"></span>
+													Kuningan, Jakarta Selatan
+												</p>
+												<h4 class="title font-text-bold">
+													<a href="project-detail.html">Jakarta Resort Extension</a>
+												</h4>
+												<p class="startfrom">Start From</p>
+												<h3 class="price font-text-bold">
+													<sup>IDR</sup>160<sub>.000.000.000</sub>
+												</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="navigation-wrapper" data-aos="fade-in">
+									<div class="swiper-custom-arrow swiper-button-prev"></div>
+									<div class="swiper-custom-arrow swiper-button-next"></div>
+									<div class="swiper-scrollbar"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="join-team">
+				<div class="container">
+					<div class="wrapper" data-aos="fade-right">
+						<div class="shape"></div>
+						<div class="wording-area text-center" data-aos="zoom-in" data-aos-delay="600">
+							<div class="row no-gutters justify-content-center">
+								<div class="col-11 col-md-8 col-lg-7 col-xl-6">
+									<h3 class="font-text-bold">Interested Selling With Us?</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+									<a href="sell.html" class="button font-text-bold">Sell With Us</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="floating-button" data-aos="zoom-in-left" data-aos-delay="600">
+				<a class="font-text-bold" href="sell.html">
+					Sell With Us
+				</a>
+			</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'contact-page with-banner' %}
+{% set head_title = 'Contact' %}
+{% block page %}
+			<section class="banner-title">
+				<div class="image-area" data-aos="fade-in">
+					<div class="overlay"></div>
+					<figure>
+						<div class="images" style="background-image: url('assets/img/photos/image_7.jpg');"></div>
+					</figure>
+				</div>
+				<div class="title-area">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="zoom-in">Get in Touch</h4>
+					</div>
+				</div>
+			</section>
+			<section class="contact-view">
+				<div class="container">
+					<div class="contact-content">
+						<div class="wrapper">
+							<div class="field-content map-area">
+								<div class="row no-gutters align-items-center">
+									<div class="col-lg-7">
+										<figure>
+											<div class="images" data-aos="zoom-in"></div>
+											{# <img src="assets/img/graphics/map_image.png" alt="" data-aos="zoom-in"> #}
+										</figure>
+									</div>
+									<div class="col-lg-5">
+										<div class="wrapper-contact">
+											<div class="box" data-aos="zoom-in">
+												<div class="call-us">
+													<div class="field-title">
+														<h5 class="font-text-bold">Call Us</h5>
+													</div>
+													<ul class="phone-contact">
+														<li>
+															<a href="tel:+6281289831983" target="_blank">
+																<span>+62 812 8983 1983</span>
+															</a>
+														</li>
+														<li>
+															<a href="mailto:cs@orisproperty.com.com" target="_blank">
+																<span>cs@orisproperty.com</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+												<div class="found-us">
+													<div class="field-title">
+														<h5 class="font-text-bold">Find Us</h5>
+													</div>
+													<div class="address">
+														<address>
+															Jl. Cipaku I/16, Kebayoran Baru<br>
+															Jakarta Selatan
+														</address>
+													</div>
+												</div>
+												<div class="button-area">
+													<a href="https://goo.gl/maps/BQ9sFtXbWWH5VBUh9" target="_blank" class="button full-width font-text-bold">Find Us on Google Maps</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="floating-button" data-aos="zoom-in-left" data-aos-delay="600">
+				<a class="font-text-bold" href="sell.html">
+					Sell With Us
+				</a>
+			</div>
+{% endblock %}

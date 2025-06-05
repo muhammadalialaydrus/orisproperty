@@ -1,0 +1,180 @@
+.swiper-container {
+	padding-bottom: 70px;
+	overflow: visible;
+	
+	@include breakpoint(tablet) {
+		padding-bottom: 80px;
+	}
+}
+
+.navigation-wrapper {
+	position: absolute;
+	top: initial;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.swiper-custom-arrow {
+	width: 40px;
+	height: 40px;
+	background-color: $button-background;
+	border-radius: 8px;
+	line-height: 100%;
+	color: $button-color;
+	margin-top: 0;
+	position: relative;
+	top: initial;
+	right: initial;
+	left: initial;
+	transition: all 0.3s linear;
+	
+	@include breakpoint(tablet) {
+		width: 50px;
+		height: 50px;
+	}
+
+	+ .swiper-custom-arrow {
+		margin-left: 6px;
+		
+		@include breakpoint(tablet) {
+			margin-left: 10px;
+		}
+	}
+
+	+ .swiper-scrollbar {
+		margin-left: 6px;
+		
+		@include breakpoint(tablet) {
+			margin-left: 10px;
+		}
+	}
+
+	&:after {
+		font-size: 1.3em;
+		
+		@include breakpoint(tablet) {
+			font-size: 1.5em;
+		}
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			background-color: $button-hover-background;
+		}
+	}
+}
+
+.swiper-scrollbar {
+	position: relative;
+	width: calc(100% - 92px);
+	height: 6px;
+	background-color: #cad0d9;
+	-ms-touch-action: none;
+	border-radius: 10px;
+
+	@include breakpoint(tablet) {
+		width: calc(100% - 120px);
+	}
+	
+	.swiper-scrollbar-drag {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		background-color: $button-background;
+		border-radius: 10px;
+	}
+}
+
+
+
+.cover {
+	.swiper-container {
+		padding-bottom: 0;
+	}
+	
+	.navigation-wrapper {
+		@include breakpoint(mobile) {
+			display: none;
+		}
+
+		@include breakpoint(tablet) {
+			left: initial;
+			right: 16px;
+			bottom: 20px;
+		}
+
+		@include breakpoint(wide) {
+			right: 30px;
+			bottom: 30px;
+		}
+
+		@include breakpoint(desktop) {
+			right: 60px;
+			bottom: 50px;
+		}
+	}
+
+	.swiper-custom-arrow {
+		@include breakpoint(tablet) {
+			background-color: rgba($navy, 0.5);
+			backdrop-filter: saturate(180%) blur(20px);
+			box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+		}
+
+		&:hover {
+			@include breakpoint(desktop) {
+				color: $navy;
+				background-color: $white;
+			}
+		}
+	}
+
+	.swiper-pagination {
+		&.swiper-pagination-bullets-dynamic {
+			@include breakpoint(tablet) {
+				width: auto!important;
+				padding: 10px;
+				top: 50%;
+				left: initial;
+				right: 6px;
+				bottom: initial;
+				transform: translate(0, -50%);
+			}
+			
+			@include breakpoint(wide) {
+				right: 20px;
+			}
+			
+			@include breakpoint(desktop) {
+				right: 50px;
+			}
+
+			.swiper-pagination-bullet {
+				opacity: 0.4;
+				box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+
+				@include breakpoint(tablet) {
+					display: block;
+					margin: 8px 0;
+					width: 12px;
+					height: 12px;
+					left: 0!important;
+				}
+
+				&.swiper-pagination-bullet-active {
+					background-color: $white;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+

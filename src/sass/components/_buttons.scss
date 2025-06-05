@@ -1,0 +1,240 @@
+/**
+* Buttons
+*/
+
+$btn-bg: $primary;
+$btn-text-color: white;
+$btn-font-weight: inherit;
+$btn-font-size: inherit;
+$btn-padding-x: .75rem;
+$btn-padding-y: .5rem;
+$btn-border-color: transparent;
+$btn-border-width: 1px;
+$btn-border-radius: 0;
+
+$btn-hover-bg: darken($primary, 10%);
+$btn-hover-text-color: white;
+$btn-hover-border-color: transparent;
+
+.btn {
+	display: inline-block;
+	padding: $btn-padding-y $btn-padding-x;
+	border: $btn-border-width solid transparent;
+	background-color: $btn-bg;
+	color: $btn-text-color;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	cursor: pointer;
+	transition: $transition-base;
+	user-select: none;
+	text-decoration: none;
+	border-radius: $btn-border-radius;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover {
+		background-color: $btn-hover-bg;
+		color: $btn-hover-text-color;
+		border-color: $btn-hover-border-color;
+	}
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-outline {
+	border: 1px solid $btn-bg;
+	background-color: transparent;
+	color: $btn-bg;
+	
+	&:hover {
+		border-color: $btn-bg;
+		background-color: $btn-bg;
+		color: $btn-hover-text-color;
+	}
+}
+
+.button {
+	color: $white;
+	border: 2px solid $button-background;
+	background-color: $button-background;
+	text-align: center;
+	padding: 12px 20px;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 100%;
+	text-transform: uppercase;
+	width: auto;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: all 0.3s linear;
+	
+	@include breakpoint(tablet) {
+		font-size: 16px;
+		padding: 16px 30px;
+	}
+	
+	@include breakpoint(wide) {
+		font-size: 14px;
+		padding: 16px 30px;
+	}
+	
+	@include breakpoint(desktop) {
+		font-size: 16px;
+		padding: 16px 30px;
+	}
+
+	&.full-rounded {
+		border-radius: 30px;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			color: $button-hover-color;
+			background-color: $button-hover-background;
+			border-color: $button-hover-background;
+		}
+
+		.icon-arrow {
+			@include breakpoint(desktop) {
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+
+	&:focus {
+		color: $button-hover-color;
+		background-color: $button-hover-background;
+		border-color: $button-hover-background;
+		outline: 0;
+		box-shadow: none;
+	}
+
+	&[disabled] {
+		opacity: 0.5;
+	}
+
+	&.white {
+		color: $body-color;
+		border-color: $white;
+		background-color: $white;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				color: $button-hover-color;
+				background-color: $button-hover-background;
+				border-color: $button-hover-background;
+			}
+		}
+
+		&:focus {
+			color: $button-hover-color;
+			background-color: $button-hover-background;
+			border-color: $button-hover-background;
+			outline: 0;
+			box-shadow: none;
+		}
+
+		&.outline {
+			border-color: $white;
+			background-color: transparent;
+			color: $white;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					color: $black;
+					border-color: $white;
+					background-color: $white;
+				}
+			}
+
+			&:focus {
+				color: $black;
+					border-color: $white;
+					background-color: $white;
+			}
+		}
+	}
+
+	&.outline {
+		border-color: $button-background;
+		background-color: transparent;
+		color: $button-background;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				border-color: $button-hover-background;
+				background-color: $button-hover-background;
+				color: $button-hover-color;
+			}
+		}
+
+		&:focus {
+			border-color: $button-hover-background;
+			background-color: $button-hover-background;
+			color: $button-hover-color;
+		}
+	}
+}
+
+.cta {
+	font-size: 0.9em;
+	color: $link-color;
+	text-transform: uppercase;
+	
+	@include breakpoint(tablet) {
+		font-size: 1.25em;
+	}
+
+	&:hover {
+		@include breakpoint(desktop) {
+			color: $link-hover-color;
+		}
+
+		.icon-arrow {
+			@include breakpoint(desktop) {
+				background-image: url('../assets/img/icon-chevron-right-gold.png');
+			}
+		}
+	}
+
+	span {
+		display: inline-block;
+    	vertical-align: middle;
+	}
+
+	.icon-arrow {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 0 0 4px;
+		width: 18px;
+		height: 18px;
+		background-image: url('../assets/img/icon-chevron-right-navy.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		transition: all 0.3s linear;
+
+		@include breakpoint(tablet) {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

@@ -1,0 +1,472 @@
+.jcf-select {
+	position: relative;
+	display: block;
+	outline: 0;
+	cursor: pointer;
+	text-align: left;
+	box-shadow: none;
+	padding: 0 32px 0 12px;
+	color: $body-color;
+	font-size: 14px;
+	margin: 0;
+	min-width: 0;
+	background-color: $white;
+	border: 0;
+	border-radius: 8px;
+	
+	@include breakpoint(tablet) {
+		padding: 0 32px 0 16px;
+	}
+
+	.form-control {
+		cursor: pointer;
+		top: 0;
+		left: 0;
+	}
+
+	.jcf-select-text {
+		font-size: 12px;
+		font-family: 'montserrat_medium';
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 40px;
+		color: $body-color;
+		margin: 0;
+		cursor: pointer;
+		display: block;
+		
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+
+		.jcf-option-placeholder {
+			color: #a7b3c9;
+			font-style: italic;
+		}
+	}
+
+	.jcf-select-opener {
+		font-family: 'Font Awesome 5 Free';
+		font-size: 1.2em;
+		font-weight: 900;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		line-height: 1;
+		background-color: transparent;
+		position: absolute;
+		top: 50%;
+		bottom: initial;
+		left: initial;
+		right: 16px;
+		pointer-events: none;
+		transform: translate(0, -50%);
+
+		&:after {
+			content: "\f107";
+		}
+	}
+}
+
+.jcf-select-drop {
+	.jcf-select-drop-content {
+		border-color: $yellow;
+		overflow: hidden;
+		border-radius: 4px;
+		box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+
+		.jcf-list {
+		    background-color: $white;
+
+			.jcf-option {
+				font-size: 1.1em;
+				height: auto;
+				padding: 10px;
+				color: $grey;
+				white-space: normal;
+				line-height: 130%;
+				cursor: pointer;
+	
+				&.jcf-option-hideme { 
+					display: none; 
+				}
+
+				img {
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 6px 0 0;
+					width: 30px;
+				}
+			}
+
+			.jcf-hover {
+				background-color: $yellow;	
+			}
+
+			.jcf-selected {
+				background-color: $yellow;
+				color: $white;
+			}
+		}
+
+		.jcf-list-content {
+			li {
+				border-bottom: 1px solid $yellow;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+body>.jcf-select-drop {
+	padding: 5px 0 0;
+
+	&.jcf-drop-flipped {
+		margin: 0;
+		padding: 0 0 5px;
+	}
+}
+
+.jcf-checkbox {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: #fff;
+	border: 1px solid $navy;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+	border-radius: 4px;
+
+	span{
+		position: absolute;
+		display: none;
+		height: 6px;
+		width: 10px;
+		top: 50%;
+		left: 50%;
+		margin: -7px 0 0 -6px;
+		border: 1px solid $blue;
+		border-width: 0 0 2px 2px;
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+
+	&.jcf-checked {
+		border-color: $blue;
+
+		span{
+			display: block;
+		}
+	}
+}
+
+:root .jcf-checkbox span {
+	margin:-4px 0 0 -5px;
+}
+
+.checkbox {
+	&.blue {
+		.jcf-checkbox {
+			&.jcf-checked {
+				background-color: $black;
+				border-color: $black!important;
+
+				span {
+					border-color: $white!important;
+				}
+			}
+		}
+	}
+
+	&.red {
+		.jcf-checkbox {
+			&.jcf-checked {
+				background-color: $yellow;
+				border-color: $yellow!important;
+
+				span {
+					border-color: $white!important;
+				}
+			}
+		}
+	}
+
+	&.green {
+		.jcf-checkbox {
+			&.jcf-checked {
+				background-color: $green;
+				border-color: $green!important;
+
+				span {
+					border-color: $white!important;
+				}
+			}
+		}
+	}
+}
+
+.jcf-radio {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: #fff;
+	border: 1px solid $navy;
+	border-radius: 9px;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+
+	span{
+		display: none;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		background-color: $blue;
+		border-radius: 100%;
+	}
+
+	input[type="radio"] {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+
+	&.jcf-checked {
+		border-color: $blue;
+
+		span {
+			display: block;
+		}
+	}
+
+	& + label {
+		font-size: 12px;
+		
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+	}
+}
+
+.jcf-radio,
+.jcf-checkbox {
+	cursor: pointer;
+
+	& + label {
+		cursor: pointer;
+	}
+}
+
+.jcf-number {
+	width: 100%;
+	height: auto;
+
+	input {
+		display: block;
+		line-height: 148%;
+		outline: 0;
+		padding: 8px 40px 8px 16px;
+		height: auto;
+		width: 100%;
+		color: $grey;
+		font-size: 14px;
+		margin: 0;
+		min-width: 0;
+		border-color: $yellow;
+		box-shadow: none;
+		border-radius: 3px;
+	}
+
+	.jcf-btn-dec, 
+	.jcf-btn-inc {
+		background-color: $yellow;
+		width: 30px;
+		height: 19px;
+		color: $grey;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: 1.3em;
+		cursor: pointer;
+		border-left: 1px solid $yellow;
+
+		&:before {
+			border: 0;
+			margin: 0;
+			width: auto;
+			height: auto;
+			line-height: 14px;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	.jcf-btn-inc {
+		&:before {
+			content: "\f106";
+			top: initial;
+			bottom: 0;
+		}
+	}
+
+	.jcf-btn-dec{
+		&:before {
+			content: "\f107";
+			bottom: initial;
+			top: 0;
+		}
+	}
+}
+
+.jcf-scrollbar {
+	background-color: rgba(255, 255, 255, .3);
+	width: 6px;
+	padding: 0 4px;
+	cursor: -webkit-grab;
+
+	.jcf-scrollbar-handle,
+	.jcf-scrollbar-dec, 
+	.jcf-scrollbar-inc {
+		width: 6px;
+	}
+
+	.jcf-scrollbar-slider {
+		background-color: rgba(167, 167, 167, .3);
+		border-radius: 10px;
+	}
+
+	.jcf-scrollbar-handle {
+		background-color: $black;
+		opacity: 0.6;
+		cursor: -webkit-grabbing;
+		transition: all 0.3s linear;
+		border-radius: 10px;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.jcf-scrollbar-dec,
+	.jcf-scrollbar-inc {
+		background-color: transparent;
+
+		&:before {
+			display: inline-block;
+			color: $black;
+			background-color: transparent;
+			font: normal normal normal 14px/1 FontAwesome;
+			font-size: inherit;
+			text-rendering: auto;
+			position: absolute;
+			left: 50%;
+			right: initial;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	.jcf-scrollbar-dec.jcf-inactive,
+	.jcf-scrollbar-inc.jcf-inactive {
+		&:before {
+			color: rgba(167, 167, 167, .3);
+		}
+	}
+
+	.jcf-scrollbar-dec {
+		&:before {
+			content: "\f106";
+			top: 0;
+			bottom: initial;
+		}
+	}
+	.jcf-scrollbar-inc {
+		&:before {
+			content: "\f107";
+			top: initial;
+			bottom: 0;
+		}
+	}
+}
+
+.jcf-file {
+	font-size: 12px;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	
+	@include breakpoint(tablet) {
+		font-size: 14px;
+	}
+
+	.jcf-fake-input {
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 5px 110px 5px 12px;
+		line-height: 30px;
+		background-color: $white;
+		border-radius: 30px;
+
+		@include breakpoint(tablet) {
+			padding: 5px 122px 5px 16px;
+		}
+	}
+
+	.jcf-upload-button {
+		position: absolute;
+		top: 0;
+		bottom: initial;
+		left: initial;
+		right: 0;
+		vertical-align: top;
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 5px 16px;
+		line-height: 30px;
+		height: 40px;
+		border-left: 1px solid $body-color;
+		background-color: $footer-background;
+		border-radius: 0 30px 30px 0;
+	}
+
+	.jcf-real-element {
+		position: absolute;
+		height: 100%;
+		margin: 0;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,663 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'vendor-form-page' %}
+{% set head_title = 'Vendor Form' %}
+{% block page %}
+			<section class="vendor-form">
+				<div class="container">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="fade-right">Vendor Form</h4>
+					</div>
+					<div class="vendor-content">
+						<div class="wrapper">
+							<div class="sales-name">
+								<div class="row no-gutters" data-aos="fade-right">
+									<div class="col-4 col-md-2">
+										<h6>No. Listing</h6>
+									</div>
+									<div class="col-1">
+										<h6>:</h6>
+									</div>
+									<div class="col-7 col-md-9">
+										<h6>123456</h6>
+									</div>
+								</div>
+								<div class="row no-gutters" data-aos="fade-right" data-aos-delay="300">
+									<div class="col-4 col-md-2">
+										<h6>Marketing</h6>
+									</div>
+									<div class="col-1">
+										<h6>:</h6>
+									</div>
+									<div class="col-7 col-md-9">
+										<h6>Amrina Alwis</h6>
+									</div>
+								</div>
+							</div>
+							<div class="form-content">
+								<form action="" class="form" id="vendor-form">
+									<div class="row row-field">
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Persetujuan Pemasaran Properti</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Jenis Transaksi</label>
+															<div class="row no-gutters">
+																<div class="form-check col-4 col-sm-3 col-md-4 col-lg-3">
+																	<input class="form-check-input" type="radio" name="transaction-type" id="transaction-type1" value="Jual" checked>
+																	<label class="form-check-label" for="transaction-type1">Jual</label>
+																</div>
+																<div class="form-check col-4 col-sm-3 col-md-4 col-lg-3">
+																	<input class="form-check-input" type="radio" name="transaction-type" id="transaction-type2" value="Sewa">
+																	<label class="form-check-label" for="transaction-type2">Sewa</label>
+																</div>
+																<div class="form-check col-4 col-sm-3 col-md-4 col-lg-3">
+																	<input class="form-check-input" type="radio" name="transaction-type" id="transaction-type3" value="Lainnya">
+																	<label class="form-check-label" for="transaction-type3">Lainnya</label>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="date-input">Tanggal</label>
+															<div class="wrapper-date">
+																<input type="text" class="form-control datepicker-form" id="date-input" name="date" placeholder="Tanggal" required>
+																<span class="icon-date fas fa-calendar-alt"></span>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="referral-number-input">No. Referal</label>
+															<input type="number" class="form-control" id="referral-number" name="referral-number" placeholder="No. Referal">
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Alamat Properti</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="property-address">Alamat</label>
+															<input type="text" class="form-control" id="property-address" name="propertyAddress" placeholder="Alamat Lengkap" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-kel">Kelurahan</label>
+															<input type="text" class="form-control" id="property-kel" name="propertyKel" placeholder="Kelurahan" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-kec">Kecamatan</label>
+															<input type="text" class="form-control" id="property-kec" name="propertyKec" placeholder="Kecamatan" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-kab">Kabupaten</label>
+															<input type="text" class="form-control" id="property-kab" name="propertyKab" placeholder="Kabupaten">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-zip">Kode Pos</label>
+															<input type="number" class="form-control" id="property-zip" name="propertyZip" placeholder="Kode Pos" required>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="zoom-in">
+													<legend class="legend-field font-text-bold">Vendor <i>(Pemilik Properti)</i></legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="vendor-name">Nama</label>
+															<input type="text" class="form-control" id="vendor-name" name="vendorName" placeholder="Nama Lengkap" required>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="vendor-address">Alamat</label>
+															<input type="text" class="form-control" id="vendor-address" name="vendorAddress" placeholder="Alamat Lengkap" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="vendor-home-phone">Telpon Rumah</label>
+															<input type="number" class="form-control" id="vendor-home-phone" name="vendorHomePhone" placeholder="No. Telpon Rumah">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="vendor-handphone">Hp</label>
+															<input type="number" class="form-control" id="vendor-handphone" name="vendorHandphone" placeholder="No. Hp" required>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="vendor-email">Email</label>
+															<input type="email" class="form-control" id="vendor-email" name="vendorEmail" placeholder="Alamat Email">
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="vendor-ktp">No. KTP</label>
+															<input type="number" class="form-control" id="vendor-ktp" name="vendorKtp" placeholder="No. KTP" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="vendor-birth-place">Tempat Lahir</label>
+															<input type="text" class="form-control" id="vendor-birth-place" name="vendorBirthPlace" placeholder="Tempat Lahir" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="vendor-birthday">Tanggal Lahir</label>
+															<div class="wrapper-date">
+																<input type="text" class="form-control datepicker-form" id="vendor-birthday" name="vendorBirthday" placeholder="Tanggal Lahir" required>
+																<span class="icon-date fas fa-calendar-alt"></span>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Contact Person <i>(Penghubung)</i></legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="mediator-name">Nama</label>
+															<input type="text" class="form-control" id="mediator-name" name="mediatorName" placeholder="Nama Lengkap" required>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="mediator-address">Alamat</label>
+															<input type="text" class="form-control" id="mediator-address" name="mediatorAddress" placeholder="Alamat Lengkap" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="mediator-home-phone">Telpon Rumah</label>
+															<input type="number" class="form-control" id="mediator-home-phone" name="mediatorHomePhone" placeholder="No. Telpon Rumah">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="mediator-handphone">Hp</label>
+															<input type="number" class="form-control" id="mediator-handphone" name="mediatorHandphone" placeholder="No. Hp" required>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="mediator-email">Email</label>
+															<input type="email" class="form-control" id="mediator-email" name="mediatorEmail" placeholder="Alamat Email">
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="mediator-ktp">No. KTP</label>
+															<input type="number" class="form-control" id="mediator-ktp" name="mediatorKtp" placeholder="No. KTP" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="mediator-birth-place">Tempat Lahir</label>
+															<input type="text" class="form-control" id="mediator-birth-place" name="mediatorBirthPlace" placeholder="Tempat Lahir" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="mediator-birthday">Tanggal Lahir</label>
+															<div class="wrapper-date">
+																<input type="text" class="form-control datepicker-form" id="mediator-birthday" name="mediatorBirthday" placeholder="Tanggal Lahir" required>
+																<span class="icon-date fas fa-calendar-alt"></span>
+															</div>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="mediator-relationship">Hubungan</label>
+															<input type="text" class="form-control" id="mediator-relationship" name="mediatorRelationship" placeholder="Hubungan" required>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Harga Properti</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="property-price">Harga Jual</label>
+															<input class="form-control price-currency" id="property-price" name="propertyPrice" placeholder="Harga Jual">
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="property-price-min">Harga Bottom</label>
+															<input class="form-control price-currency" id="property-price-min" name="propertyPriceMin" placeholder="Harga Bottom">
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold" for="property-price-nett">Harga Nett</label>
+															<input class="form-control price-currency" id="property-price-nett" name="propertyPriceNett" placeholder="Harga Nett">
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Data Properti</legend>
+													<div class="form-row">
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="land-size">Ukuran Tanah</label>
+															<input type="text" class="form-control" id="land-size" name="landSize" placeholder="/m2" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="surface-area">Luas Tanah</label>
+															<input type="text" class="form-control" id="surface-area" name="surfaceArea" placeholder="m x m" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="building-size">Ukuran Bangunan</label>
+															<input type="text" class="form-control" id="building-size" name="buildingSize" placeholder="/m2" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="building-area">Luas Bangunan</label>
+															<input type="text" class="form-control" id="building-area" name="buildingArea" placeholder="m x m" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="building-direction">Arah / Hadap</label>
+															<input type="text" class="form-control" id="building-direction" name="buildingDirection" placeholder="Arah / Hadap" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="floor-number">Jumlah Lantai</label>
+															<input type="text" class="form-control" id="floor-number" name="floorNumber" placeholder="Jumlah Lantai" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="building-condition">Kondisi Bangunan</label>
+															<input type="text" class="form-control" id="building-condition" name="buildingCondition" placeholder="Kondisi Bangunan" required>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Jenis Properti</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Jenis Properti</label>
+															<div class="row no-gutters">
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type1" value="Rumah/Villa" checked>
+																	<label class="form-check-label" for="property-type1">Rumah / Villa</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type2" value="Kantor/Tanah">
+																	<label class="form-check-label" for="property-type2">Kantor / Tanah</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type3" value="Apartemen">
+																	<label class="form-check-label" for="property-type3">Apartemen</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type4" value="Ruko/Rukan">
+																	<label class="form-check-label" for="property-type4">Ruko / Rukan</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type5" value="Gudang">
+																	<label class="form-check-label" for="property-type5">Gudang</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="radio" name="propertyType" id="property-type6" value="Lainnya">
+																	<label class="form-check-label" for="property-type6">Lainnya</label>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="master-bedroom">Kamar Tidur Utama</label>
+															<select class="form-control" id="master-bedroom" name="masterBedroom">
+																<option value="" class="placeholder" hidden>Kamar Tidur Utama</option>
+																<option value="1 Kamar">1 Kamar</option>
+																<option value="2 Kamar">2 Kamar</option>
+																<option value="3 Kamar">3 Kamar</option>
+																<option value="4 Kamar">4 Kamar</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="kids-bedroom">Kamar Tidur Anak</label>
+															<select class="form-control" id="kids-bedroom" name="kidsBedroom">
+																<option value="" class="placeholder" hidden>Kamar Tidur Anak</option>
+																<option value="1 Kamar">1 Kamar</option>
+																<option value="2 Kamar">2 Kamar</option>
+																<option value="3 Kamar">3 Kamar</option>
+																<option value="4 Kamar">4 Kamar</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="master-bathroom">Kamar Mandi Utama</label>
+															<select class="form-control" id="master-bathroom" name="masterBathroom">
+																<option value="" class="placeholder" hidden>Kamar Mandi Utama</option>
+																<option value="1 Kamar Mandi">1 Kamar Mandi</option>
+																<option value="2 Kamar Mandi">2 Kamar Mandi</option>
+																<option value="3 Kamar Mandi">3 Kamar Mandi</option>
+																<option value="4 Kamar Mandi">4 Kamar Mandi</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="kids-bathroom">Kamar Mandi Anak</label>
+															<select class="form-control" id="kids-bathroom" name="kidsBathroom">
+																<option value="" class="placeholder" hidden>Kamar Mandi Anak</option>
+																<option value="1 Kamar Mandi">1 Kamar Mandi</option>
+																<option value="2 Kamar Mandi">2 Kamar Mandi</option>
+																<option value="3 Kamar Mandi">3 Kamar Mandi</option>
+																<option value="4 Kamar Mandi">4 Kamar Mandi</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="maid-bedroom">Kamar Tidur Pembantu</label>
+															<select class="form-control" id="maid-bedroom" name="maidBedroom">
+																<option value="" class="placeholder" hidden>Kamar Tidur Pembantu</option>
+																<option value="1 Kamar">1 Kamar</option>
+																<option value="2 Kamar">2 Kamar</option>
+																<option value="3 Kamar">3 Kamar</option>
+																<option value="4 Kamar">4 Kamar</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="maid-bathroom">Kamar Mandi Pembantu</label>
+															<select class="form-control" id="maid-bathroom" name="maidBathroom">
+																<option value="" class="placeholder" hidden>Kamar Mandi Pembantu</option>
+																<option value="1 Kamar Mandi">1 Kamar Mandi</option>
+																<option value="2 Kamar Mandi">2 Kamar Mandi</option>
+																<option value="3 Kamar Mandi">3 Kamar Mandi</option>
+																<option value="4 Kamar Mandi">4 Kamar Mandi</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-carport">Carport</label>
+															<select class="form-control" id="property-carport" name="propertyCarport">
+																<option value="" class="placeholder" hidden>Carport</option>
+																<option value="1 Mobil">1 Mobil</option>
+																<option value="2 Mobil">2 Mobil</option>
+																<option value="3 Mobil">3 Mobil</option>
+																<option value="4 Mobil">4 Mobil</option>
+															</select>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="property-garage">Garasi</label>
+															<select class="form-control" id="property-garage" name="propertyGarage">
+																<option value="" class="placeholder" hidden>Garasi</option>
+																<option value="1 Mobil">1 Mobil</option>
+																<option value="2 Mobil">2 Mobil</option>
+																<option value="3 Mobil">3 Mobil</option>
+																<option value="4 Mobil">4 Mobil</option>
+															</select>
+														</div>
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Fasitilas Properti</label>
+															<div class="row no-gutters">
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="guest-room" value="Ruang Tamu">
+																	<label class="form-check-label" for="guest-room">Ruang Tamu</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="family-room" value="Ruang Keluarga">
+																	<label class="form-check-label" for="family-room">Ruang Keluarga</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="dining-room" value="Ruang Makan">
+																	<label class="form-check-label" for="dining-room">Ruang Makan</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="study-room" value="Ruang Belajar">
+																	<label class="form-check-label" for="study-room">Ruang Belajar</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="front-garden" value="Taman Depan">
+																	<label class="form-check-label" for="front-garden">Taman Depan</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="backyard" value="Taman Belakang">
+																	<label class="form-check-label" for="backyard">Taman Belakang</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="beranda" value="Beranda">
+																	<label class="form-check-label" for="beranda">Beranda</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="warehouse" value="Gudang">
+																	<label class="form-check-label" for="warehouse">Gudang</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="wet-kitchen" value="Dapur Basah">
+																	<label class="form-check-label" for="wet-kitchen">Dapur Basah</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="propertyTypeCheckbox" id="dry-kitchen" value="Dapur Kering">
+																	<label class="form-check-label" for="dry-kitchen">Dapur Kering</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Keterangan Fasilitas</legend>
+													<div class="form-row">
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="electricity-facility">Listrik</label>
+															<input type="text" class="form-control" id="electricity-facility" name="electricityFacility" placeholder="Watt" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="phone-facility">Telepon</label>
+															<input type="text" class="form-control" id="phone-facility" name="phoneFacility" placeholder="Unit">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="ac-facility">AC</label>
+															<input type="text" class="form-control" id="ac-facility" name="acFacility" placeholder="Unit" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="heater-facility">Water Heater</label>
+															<input type="text" class="form-control" id="heater-facility" name="heaterFacility" placeholder="Unit" required>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold">Air</label>
+															<div class="row no-gutters">
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="waterFacility" id="water-facility1" value="Air PAM" checked>
+																	<label class="form-check-label" for="water-facility1">Air PAM</label>
+																</div>
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="waterFacility" id="water-facility2" value="Air Sumur">
+																	<label class="form-check-label" for="water-facility2">Air Sumur</label>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold">Furnished</label>
+															<div class="row no-gutters">
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="furnishedFacility" id="furnished-facility1" value="Fully Furnished" checked>
+																	<label class="form-check-label" for="furnished-facility1">Fully Furnished</label>
+																</div>
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="furnishedFacility" id="furnished-facility2" value="Semi Furnished">
+																	<label class="form-check-label" for="furnished-facility2">Semi Furnished</label>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold">TV</label>
+															<div class="row no-gutters">
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="tvFacility" id="tv-facility1" value="TV Satelit" checked>
+																	<label class="form-check-label" for="tv-facility1">TV Satelit</label>
+																</div>
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="radio" name="tvFacility" id="tv-facility2" value="Parabola">
+																	<label class="form-check-label" for="tv-facility2">Parabola</label>
+																</div>
+															</div>
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold">Kolam Renang</label>
+															<div class="row no-gutters">
+																<div class="form-check col-12">
+																	<input class="form-check-input" type="checkbox" name="poolFacility" id="pool-facility1" value="Kolam Renang">
+																	<label class="form-check-label" for="pool-facility1">Kolam Renang</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Dokumentasi &amp; Sumber Data</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Dokumentasi</label>
+															<div class="row no-gutters">
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="certificate-copy" value="Copy Sertifikat">
+																	<label class="form-check-label" for="certificate-copy">Copy Sertifikat</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="rental-certificate-copy" value="Copy Akta Sewa">
+																	<label class="form-check-label" for="rental-certificate-copy">Copy Akta Sewa</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="imb-copy" value="Copy IMB">
+																	<label class="form-check-label" for="imb-copy">Copy IMB</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="id-copy" value="Copy KTP / KK">
+																	<label class="form-check-label" for="id-copy">Copy KTP / KK</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="pbb-copy" value="Copy PBB">
+																	<label class="form-check-label" for="pbb-copy">Copy PBB</label>
+																</div>
+																<div class="form-check col-6 col-sm-4 col-md-6 col-xl-4">
+																	<input class="form-check-input" type="checkbox" name="documentCheckbox" id="photo-copy" value="Photo">
+																	<label class="form-check-label" for="photo-copy">Photo</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Status Kepemilikan</legend>
+													<div class="form-row">
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="shm-owner">SHM No.</label>
+															<input type="number" class="form-control" id="shm-owner" name="shmOwner" placeholder="SHM No.">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="img-owner">IMG No.</label>
+															<input type="number" class="form-control" id="img-owner" name="imgOwner" placeholder="IMG No.">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="pbb-owner">PBB No.</label>
+															<input type="number" class="form-control" id="pbb-owner" name="pbbOwner" placeholder="PBB No.">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="hgb-owner">HGB</label>
+															<input type="text" class="form-control" id="hgb-owner" name="hgbOwner" placeholder="Tahun">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="hgu-owner">HGU / Sewa</label>
+															<input type="text" class="form-control" id="hgu-owner" name="hguOwner" placeholder="Tahun">
+														</div>
+														<div class="form-group col-6">
+															<label class="label-form font-text-bold" for="hpl-owner">HPL</label>
+															<input type="text" class="form-control" id="hpl-owner" name="hplOwner" placeholder="Tahun">
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Keterangan &amp; Lokasi</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Keterangan &amp; Lokasi</label>
+															<textarea class="form-control" id="description-location-property" name="descriptionLocationProperty" placeholder="Keterangan &amp; Lokasi" required></textarea>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="wrapper-field">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Catatan</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<label class="label-form font-text-bold">Catatan</label>
+															<textarea class="form-control" id="note-property" name="noteProperty" placeholder="Catatan"></textarea>
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="wrapper-field tnc">
+												<fieldset data-aos="fade-up">
+													<legend class="legend-field font-text-bold">Syarat &amp; Kondisi</legend>
+													<div class="form-row">
+														<div class="form-group col-12">
+															<div class="intro-tnc">
+																<p>Dengan ini Para Pihak mengikat diri dalam perjanjian di bawah ini :</p>
+																<p>Vendor Menjamin dan Menyatakan bahwa</p>
+																<ol class="tnc-list">
+																	<li>Adalah pemilik yang sah dan berhak atas kepemilikan Properti.</li>
+																	<li>Properti yang dipasarkan tidak dalam sengketa dengan pihak manapun.</li>
+																	<li>Vendor bertanggung jawab sepenuhnya atas seluruh permasalahan sehubung dengan kepemilikan Properti dan membebaskan Pihak Agent atas permasalahan kepemilikan Properti.</li>
+																</ol>
+															</div>
+															<div class="content-tnc">
+																<label class="label-form font-text-bold">Syarat &amp; Kondisi</label>
+																<div class="row no-gutters">
+																	<div class="form-check col-12">
+																		<input class="form-check-input" type="radio" name="tncOption" id="tnc-option1" value="Kesepakatan Exclusive">
+																		<label class="form-check-label" for="tnc-option1">Kesepakatan Exclusive</label>
+																		<ol class="tnc-list">
+																			<li>Vendor tidak sedang mengikat diri dengan Agent Properti lain.</li>
+																			<li>Vendor menyerahkan berkas kepada pihak Agent berupa Sertifikat / Girik, IMB, PBB.</li>
+																			<li>Vendor berhak untuk mendapatkan layanan Exclusive listing service dan service guarantee dari Oris Property.</li>
+																			<li>Vendor memberikan hak untuk memasarkan Properti yang tercantum di form ini hanya kepada Oris Property.</li>
+																			<li>Bilamana Properti terjual atau tersewa oleh Agent / orang lain selain Oris Properti, selama perjanjian ini berlaku maka success fee tetap dibayarkan oleh Vendor kepada Oris Property.</li>
+																		</ol>
+																	</div>
+																	<div class="form-check col-12">
+																		<input class="form-check-input" type="radio" name="tncOption" id="tnc-option2" value="Kesepakatan Sale Agent">
+																		<label class="form-check-label" for="tnc-option2">Kesepakatan Sale Agent</label>
+																		<ol class="tnc-list">
+																			<li>Vendor bisa ikut memasarkan Properti dan Agent Properti hanya dari Oris Propety.</li>
+																			<li>Apabila terjual oleh Vendor maka Oris Propety tidak mendapatkan success fee.</li>
+																		</ol>
+																	</div>
+																	<div class="form-check col-12">
+																		<input class="form-check-input" type="radio" name="tncOption" id="tnc-option3" value="Kesepakatan Open Agent">
+																		<label class="form-check-label" for="tnc-option3">Kesepakatan Open Agent</label>
+																		<ol class="tnc-list">
+																			<li>Vendor dan Agent Properti lain bisa ikut memasarkan Properti.</li>
+																			<li>Apabila terjual oleh Vendor / Agent Properti lain maka Oris Propety tidak mendapatkan success fee.</li>
+																		</ol>
+																	</div>
+																</div>
+															</div>
+															<div class="intro-tnc">
+																<ul class="tnc-list">
+																	<li>
+																		Masa Perjanjian ini berlaku <strong>3 bulan</strong> sejak form ini di submit.
+																	</li>
+																	<li>
+																		Apabila Properti tersebut terjual oleh Oris Propety maka Vendor berkewajiban untuk membayar Success Fee kepada Oris Property sebesar <strong>5%</strong> untuk jual dan <strong>5%</strong> untuk sewa dari nilai Transaksi Properti tersebut.
+																	</li>
+																	<li>
+																		Setiap perselisihan yang timbul dari perjanjian ini para pihak telah sepakat untuk mengadakan penyelesaian secara musyawarah.
+																	</li>
+																</ul>
+															</div> 
+														</div>
+													</div>
+												</fieldset>
+											</div>
+										</div>
+									</div>
+									<div class="button-area" data-aos="zoom-in">
+										<button class="button full-width font-text-bold" type="submit">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+{% endblock %}

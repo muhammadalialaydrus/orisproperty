@@ -1,0 +1,69 @@
+/*!
+ * Project: Project name
+ * Author: Muhammad Ali
+ */
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Vendor
+@import "vendor/bootstrap";
+@import 'vendor/normalize';
+@import 'vendor/aos/aos';
+@import 'vendor/light-gallery/lightgallery';
+@import 'vendor/progressively/progressively';
+@import 'vendor/swiper/swiper';
+@import 'vendor/swiper/swiper-pagination';
+@import 'vendor/swiper/swiper-navigation';
+@import 'vendor/bootstrap-datepicker/bootstrap-datepicker';
+@import 'vendor/easy-autocomplete/easy-autocomplete';
+@import 'vendor/easy-autocomplete/easy-autocomplete.themes';
+@import 'vendor/jquery.mb.YTPlayer/jquery.mb.YTPlayer';
+
+// Fontawesome
+@import 'vendor/font-awesome/fontawesome';
+@import 'vendor/font-awesome/brands';
+@import 'vendor/font-awesome/regular';
+@import 'vendor/font-awesome/solid';
+@import 'vendor/font-awesome/v4-shims';
+
+// Video.js
+// @import 'vendor/video.js/video-js';
+
+// Base
+@import 'base/print';
+@import 'base/mixins';
+@import 'base/minireset';
+
+// Variables
+@import 'base/variables';
+@import 'base/fonts';
+
+// Typography
+@import 'components/typography';
+
+// Components
+@import 'components/**/*.scss';
+
+// Container
+@import 'layout/container';
+@import 'layout/global';
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/index';
+@import 'pages/about';
+@import 'pages/properties';
+@import 'pages/property-detail';
+@import 'pages/project';
+@import 'pages/join';
+@import 'pages/video';
+@import 'pages/agents';
+@import 'pages/agent-detail';
+@import 'pages/sell';
+@import 'pages/contact';
+@import 'pages/vendor-form';
+@import 'pages/404';
+@import 'pages/success';
+@import 'pages/flyer';

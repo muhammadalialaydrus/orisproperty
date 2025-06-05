@@ -1,0 +1,147 @@
+.contact-view  {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
+	.map-area {
+		.images {
+			display: block;
+			width: 100%;
+			height: 0;
+			padding: 0 0 83%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('../assets/img/graphics/map_image.png');
+			background-size: contain;
+		}
+	}
+
+	.box {
+		padding: 30px;
+		background-color: $white;
+		overflow: hidden;
+		border-radius: 8px;
+		box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
+	}
+
+	.wrapper-contact {
+		@include breakpoint(tablet) {
+			padding-left: 30px;
+		}
+
+		@include breakpoint(wide) {
+			padding-left: 50px;
+		}
+	}
+
+	.call-us {
+		+ .found-us {
+			margin-top: 30px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 40px;
+			}
+		}
+	}
+	
+	.found-us {
+		+ .button-area {
+			margin-top: 30px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.field-title {
+		h5  {
+			font-size: 1.1em;
+			text-transform: uppercase;
+			color: $gold;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.2em;
+			}
+		}
+
+		+ .address,
+		+ .phone-contact {
+			margin-top: 10px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 16px;
+			}
+		}
+	}
+
+	.map-area {
+		[class*="col-"] {
+			+ [class*="col-"] {
+				margin-top: 30px;
+				
+				@include breakpoint(wide) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		figure {
+			padding-right: 18%;
+		
+			@include breakpoint(wide) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.address {
+		h6 {
+			line-height: 100%;
+			font-size: 1em;
+			letter-spacing: 1pt;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.1em;
+			}
+
+			+ address {
+				margin-top: 8px;
+			}
+		}
+
+		address {
+			font-size: 1.1em;
+			line-height: 130%;
+			color: $navy;
+			margin: 0;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.3em;
+			}
+		}
+	}
+
+	.phone-contact {
+		padding: 0;
+		list-style: none;
+
+		li {
+			+ li {
+				margin-top: 6px;
+			}
+		}
+
+		a {
+			display: inline-block;
+			font-size: 1.1em;
+			line-height: 120%;
+
+			@include breakpoint(tablet) {
+				font-size: 1.3em;
+			}
+		}
+	}
+}

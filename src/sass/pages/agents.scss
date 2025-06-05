@@ -1,0 +1,119 @@
+.agents-listing {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
+	.agent-list {
+		.row {
+			margin-right: -10px;
+			margin-left: -10px;
+
+			@include breakpoint(wide) {
+				margin-right: -16px;
+				margin-left: -16px;
+			}
+
+			[class*='col-'] {
+				padding: 20px 10px;
+
+				@include breakpoint(wide) {
+					padding: 16px;
+				}
+			}
+		}
+	}
+
+	.image-area {
+		.images {
+			display: block;
+			width: 100%;
+			height: 0;
+			padding: 0 0 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 8px;
+			box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
+			transition: $transition-base;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		+ .name-area {
+			margin-top: 8px;
+		}
+	}
+
+	.name-area {
+		h5 {
+			font-size: 1.1em;
+			color: $title-color;
+			
+			@include breakpoint(small-mobile) {
+				font-size: 1em;
+			}
+			
+			@include breakpoint(tablet) {
+				font-size: 1.2em;
+			}
+
+			+ p {
+				margin-top: 8px;
+			}
+		}
+
+		p {
+			font-size: 0.8em;
+			font-style: italic;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.9em;
+			}
+		}
+
+		+ .contact-area {
+			margin-top: 10px;
+		}
+	}
+
+	ul {
+		&.contact-area {
+			padding: 0;
+
+			li {
+				margin: 0;
+
+				+ li {
+					margin-left: 2px;
+				}
+			}
+		}
+	}
+
+	.contact-list {
+		a {
+			font-size: 1.4em;
+			line-height: 34px;
+			color: $white;
+			display: block;
+			width: 34px;
+			height: 34px;
+			opacity: 0.4;
+			background-color: $button-background;
+			border-radius: 8px;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					opacity: 1;
+					background-color: $gold;
+				}
+			}
+		}
+	}
+}

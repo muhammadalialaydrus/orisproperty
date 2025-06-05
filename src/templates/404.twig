@@ -1,0 +1,27 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'not-found-page' %}
+{% set head_title = 'Page Not Found' %}
+{% block page %}
+			<section class="not-found">
+				<div class="container">
+					<div class="title-not-found">
+						<h4 class="font-text-black" data-aos="zoom-in">Oops!</h4>
+					</div>
+					<div class="content-not-found">
+						<div class="text-area">
+							<h5 class="font-text-bold" data-aos="zoom-in">404 - Page Not Found</h5>
+							{# <p>Sorry, The page you requested was not found.</p> #}
+							<p data-aos="zoom-in">The page you are looking for might have been removed, had it's name changed or it's temporarily unavailable.</p>
+						</div>
+						<div class="button-area" data-aos="zoom-in">
+							<a href="index.html" class="button full-rounded font-text-bold">Go to Homepage</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="floating-button" data-aos="zoom-in-left" data-aos-delay="600">
+				<a class="font-text-bold" href="sell.html">
+					Sell With Us
+				</a>
+			</div>
+{% endblock %}

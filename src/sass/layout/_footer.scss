@@ -1,0 +1,251 @@
+footer {
+	position: relative;
+	z-index: 1;
+	margin-top: 60px;
+	background-color: $footer-background;
+	color: $navy;
+	
+	@include breakpoint(tablet) {
+		margin-top: 80px;
+	}
+	
+	h6 {
+		color: $navy;
+	}
+
+	h5 {
+		font-size: 1em;
+		color: $dark-navy;
+		line-height: 150%;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+
+			+ li {
+				margin: 6px 0 0;
+				
+				@include breakpoint(tablet) {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.subtitle-footer {
+		+ .content-list {
+			margin-top: 6px;
+		}
+	}
+
+	.margin-top {
+		margin-top: 20px;
+		
+		@include breakpoint(wide) {
+			margin-top: 0;
+		}
+	}
+
+	.nav-top {
+		padding: 40px 0;
+		
+		@include breakpoint(tablet) {
+			padding: 60px 0;
+		}
+	}
+
+	.footer-logo {
+		figure {
+			max-width: 50%;
+			
+			@include breakpoint(tablet) {
+				max-width: 60%;
+				margin: 0;
+			}
+			
+			@include breakpoint(wide) {
+				max-width: 80%;
+			}
+		}
+
+		h5 {
+			margin-top: 6px;
+			
+			@include breakpoint(wide) {
+				margin-top: 6px;
+			}
+		}
+
+		+ .address {
+			margin-top: 10px;
+		}
+	}
+
+	.address {
+		position: relative;
+	}
+
+	address {
+		margin: 0;
+		line-height: 140%;
+	}
+
+	.contact-phone {
+		+ .social-media {
+			@include breakpoint(tablet) {
+				margin-top: 30px;
+			}
+		}
+
+		li {
+			margin: 3px 0;
+		}
+	}
+
+	.sitemap {
+		a {
+			display: block;
+			padding: 8px 0;
+			border-bottom: 1px solid $navy;
+			
+			@include breakpoint(tablet) {
+				display: inline-block;
+				padding: 0;
+				border: 0;
+			}
+		}
+
+		.row {
+			[class*='col-'] {
+				@include breakpoint(tablet) {
+					margin: 3px 0;
+				}
+
+				&:last-child {
+					a {
+						border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+
+	.social-media {
+		@include breakpoint(tablet) {
+			text-align: left;
+		}
+
+		a {
+			text-align: center;
+			display: block;
+			color: $white;
+			background: $navy;
+			width: 36px;
+			height: 36px;
+			font-size: 1.3em;
+			padding: 9px 0;
+			line-height: 100%;
+			border-radius: 8px;
+			transition: all 0.3s linear;
+		}
+
+		.icon-buttom {
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			&.fa-tiktok {
+				background-image: url('../assets/img/icon-tiktok-white.png');
+			}
+		}
+
+		li {
+			margin: 0;
+			vertical-align: middle;
+
+			+ li {
+				margin: 0 0 0 4px;
+			}
+
+			&.facebook {
+				a {
+					&:hover {
+						background-color: $facebook;
+					}
+				}
+			}
+
+			&.twitter {
+				a {
+					&:hover {
+						background-color: $twitter;
+					}
+				}
+			}
+
+			&.tiktok {
+				a {
+					&:hover {
+						background-color: $gold;
+					}
+				}
+			}
+
+			&.youtube {
+				a {
+					&:hover {
+						background-color: $youtube;
+					}
+				}
+			}
+
+			&.instagram {
+				a {
+					&:hover {
+						background: rgb(115,36,193);
+						background: -moz-linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+						background: -webkit-linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+						background: linear-gradient(212deg, rgba(115,36,193,1) 0%, rgba(196,49,98,1) 50%, rgba(222,148,62,1) 100%);
+						filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7324c1",endColorstr="#de943e",GradientType=1);
+					}
+				}
+			}
+		}
+
+		a {
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+
+	.copyright {
+		padding: 12px 0;
+		background-color: $footer-background-darker;
+		color: #e1e7f1;
+
+		.text-footer {
+			font-size: 0.8em;
+			line-height: 140%;
+			letter-spacing: 0.3pt;
+			margin: 0;
+		
+			@include breakpoint(small-mobile) {
+				font-size: 0.75em;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 0.85em;
+			}
+		}
+	}
+}

@@ -1,0 +1,138 @@
+.join-view {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
+	.wording-content {
+		+ .contact-content {
+			margin-top: 40px;
+		}
+	}
+
+	.contact-content {
+		.wrapper-content {
+			background-color: $white;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 2px 4px 20px rgba(0,0,0,0.10);
+			
+			@include breakpoint(tablet) {
+				max-width: 50%;
+				padding: 30px;
+			}
+			
+			@include breakpoint(wide) {
+				max-width: 38%;
+			}
+			
+			@include breakpoint(desktop) {
+				max-width: 35%;
+			}
+		}
+
+		.label-title {
+			font-size: 0.9em;
+			text-transform: uppercase;
+
+			+ .name-contact {
+				margin-top: 16px;
+			}
+		}
+
+		.name-contact {
+			h5 {
+				font-size: 1.5em;
+				color: $gold;
+
+				+ h6 {
+					margin-top: 10px;
+				}
+			}
+
+			h6 {
+				font-size: 1.1em;
+
+				span {
+					vertical-align: middle;
+				}
+
+				+ h6 {
+					margin-top: 4px;
+				}
+			}
+
+			.icon {
+				font-size: 1.3em;
+
+				+ span {
+					margin-left: 4px;
+				}
+			}
+
+			+ .button-area {
+				margin-top: 30px;
+			}
+		}
+
+		.button-area {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			li {
+				display: block;
+				width: 100%;
+				margin: 0;
+
+				+ li {
+					margin-top: 10px;
+				}
+			}
+
+			.button {
+				font-size: 14px;
+				padding: 12px 30px;
+			}
+		}
+	}
+	
+	.form-content {
+		.form {
+			padding: 30px 20px;
+			border-radius: 8px;
+			background-color: $navy;
+			
+			@include breakpoint(tablet) {
+				padding: 40px 30px;
+			}
+
+			label {
+				color: $white;
+			}
+
+			.button {
+				background-color: $blue;
+				border-color: $blue;
+				width: 100%;
+				
+				@include breakpoint(tablet) {
+					width: auto;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $dark-blue;
+						border-color: $dark-blue;
+					}
+				}
+			}
+
+			.invalid-feedback {
+				color: #f9a5a5;
+			}
+		}
+	}
+}

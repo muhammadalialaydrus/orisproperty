@@ -1,0 +1,192 @@
+body {
+	&.on-scroll {
+		.filter-navbar {
+			top: 50px;
+			
+			@include breakpoint(tablet) {
+				top: 64px;
+			}
+		}
+	}
+}
+
+.filter-navbar {
+	background-color: rgba($gold, 0.7);
+	position: fixed;
+	z-index: 2;
+	top: 66px;
+	left: 0;
+	right: 0;
+	bottom: initial;
+	box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
+	transition: $transition-base;
+	backdrop-filter: saturate(180%) blur(20px);
+	
+	@include breakpoint(tablet) {
+		top: 72px;
+	}
+
+	.wrapper {
+		padding: 10px 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.flat {
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		&.side-left {
+			@include breakpoint(width-tablet) {
+				width: 100%;
+			}
+
+			// @include breakpoint(small-mobile) {
+			// 	width: 64%;
+			// }
+		}
+
+		& > li {
+			margin: 0;
+			
+			@include breakpoint(width-tablet) {
+				width: 100%;
+			}
+
+			+ li {
+				@include breakpoint(tablet) {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+
+	.search-nav {
+		position: relative;
+
+		.easy-autocomplete {
+			width: 100%!important;
+		}
+
+		.form-control {
+			color: $body-color;
+			padding: 10px 48px 10px 20px;
+			height: 40px;
+			border: 0;
+			border-radius: 8px;
+
+			&:focus {
+				box-shadow: none;
+			}
+
+			&::placeholder {
+				color: $body-color;
+				font-style: italic;
+			}
+		}
+
+		.button {
+			font-size: 1em;
+			line-height: 100%;
+			width: 36px;
+			height: 36px;
+			padding: 0;
+			background-color: $semi-dark-gold;
+			border-color: $semi-dark-gold;
+			position: absolute;
+			z-index: 1;
+			top: 2px;
+			bottom: initial;
+			right: 2px;
+			left: initial;
+			border-radius: 8px;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: darken($semi-dark-gold, 10);
+					border-color: darken($semi-dark-gold, 10);
+				}
+			}
+
+			&:focus {
+				background-color: $navy;
+				border-color: $navy;
+			}
+		}
+	}
+
+	.jcf-select {
+		background-color: $semi-dark-gold;
+		color: $white;
+		transition: $transition-base;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				background-color: darken($semi-dark-gold, 10);
+			}
+		}
+
+		.jcf-select-text {
+			color: $white;
+		}
+
+		.jcf-option-placeholder {
+			color: #ede5cf;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.button-filter {
+		text-transform: initial;
+		padding: 11px 20px;
+		font-size: 1em;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				color: $gold;
+				background-color: $white;
+				border-color: $white;
+			}
+		}
+
+		&:focus {
+			color: $blue;
+			background-color: $white;
+			border-color: $white;
+		}
+	}
+}
+
+.properties-listing {
+	padding-top: 100px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 110px;
+	}
+
+	.wrapper {
+		padding: 0 20px;
+		
+		@include breakpoint(mobile-iphone) {
+			padding: 0;
+		}
+		
+		@include breakpoint(tablet) {
+			padding: 0;
+		}
+	}
+
+	.row {
+		[class*='col-'] {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+}

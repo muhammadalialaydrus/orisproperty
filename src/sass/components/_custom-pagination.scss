@@ -1,0 +1,103 @@
+.pagination {
+	margin-top: 40px;
+	
+	@include breakpoint(tablet) {
+		margin-top: 50px;
+	}
+
+	.page-item {
+		margin: 0 4px;
+
+		&.disabled {
+			.page-link {
+				opacity: 0.2;
+				background-color: $navy;
+			}
+		}
+
+		&.active {
+			.page-link {
+				color: $white;
+				opacity: 1;
+				background-color: $gold;
+				
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $gold;
+					}
+				}
+			}
+		}
+
+		& +.btn-icon {
+			font-family: 'montserrat_bold';
+			background-color: transparent;
+			line-height: 24px;
+			color: $navy;
+			pointer-events: none;
+			margin: 0 4px !important;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			opacity: 0.4;
+			display: block;
+
+			@include breakpoint(tablet) {
+				font-size: 1.2em;
+				width: 34px;
+				height: 34px;
+			}
+		}
+
+		.page-link {
+			font-family: 'montserrat_bold';
+			color: $white;
+			text-align: center;
+			line-height: 30px;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			opacity: 0.4;
+			background-color: $navy;
+			border: 0;
+			border-radius: 8px;
+			
+			@include breakpoint(wide) {
+				font-size: 1.2em;
+				width: 34px;
+				height: 34px;
+				line-height: 34px;
+			}
+
+			&.dis-more {
+				background-color: transparent;
+				color: $navy;
+				line-height: 24px;
+				pointer-events: none;
+
+				&:hover,
+				&:focus, {
+					@include breakpoint(desktop) {
+						opacity: 0.4;
+						background-color: transparent;
+					}
+				}
+			}
+
+			&:hover {
+				@include breakpoint(desktop) {
+					opacity: 1;
+				}
+			}
+
+			i {
+				font-size: 1.2em;
+				line-height: 30px;
+
+				@include breakpoint(wide) {
+					line-height: 34px;
+				}
+			}
+		}
+	}
+}

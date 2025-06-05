@@ -1,0 +1,587 @@
+.cover {
+	position: relative;
+	background-image: url('../assets/img/photos/image_18.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: initial;
+
+	.slide-info {
+		padding: 20px;
+		position: absolute;
+		top: initial;
+		bottom: 30px;
+		left: 16px;
+		right: 16px;
+		background-color: rgba($navy, 0.5);
+		color: $white;
+		border-radius: 30px;
+		box-shadow: 2px 10px 40px rgba(0,0,0,0.2);
+		backdrop-filter: saturate(180%) blur(20px);
+
+		@include breakpoint(tablet) {
+			padding: 30px;
+			bottom: 90px;
+		}
+
+		@include breakpoint(wide) {
+			bottom: 30px;
+			left: 30px;
+			right: initial;
+			max-width: 60%;
+		}
+
+		@include breakpoint(desktop) {
+			bottom: 50px;
+			left: 60px;
+			max-width: 50%;
+		}
+
+		@include breakpoint(laptop) {
+			max-width: 46%;
+		}
+
+		@include breakpoint(large-desktop) {
+			max-width: 44%;
+		}
+	}
+
+	.images {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@media only screen and (min-device-width: 1200px) and (max-device-height: 800px) {
+			height: 0;
+			padding: 0 0 66.6%;
+		}
+	}
+
+	.city {
+		font-size: 0.8em;
+		
+		@include breakpoint(tablet) {
+			font-size: 1.1em;
+		}
+		
+		@include breakpoint(wide) {
+			font-size: 1em;
+		}
+		
+		@include breakpoint(desktop) {
+			font-size: 1.1em;
+		}
+
+		span {
+			margin-right: 4px;
+			
+			@include breakpoint(tablet) {
+				margin-right: 6px;
+			}
+		}
+
+
+		+ .title {
+			margin-top: 6px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.title {
+		font-size: 1.6em;
+
+		@include breakpoint(tablet) {
+			font-size: 2.6em;
+		}
+
+		@include breakpoint(wide) {
+			font-size: 2.4em;
+		}
+
+		@include breakpoint(desktop) {
+			font-size: 2.5em;
+		}
+
+		@include breakpoint(laptop) {
+			font-size: 2.7em;
+		}
+
+		@include breakpoint(large-desktop) {
+			font-size: 3em;
+		}
+
+		+ .price {
+			margin-top: 6px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	.price {
+		font-size: 2.9em;
+		text-transform: uppercase;
+		line-height: 100%;
+		color: $yellow;
+		
+		@include breakpoint(tablet) {
+			font-size: 4em;
+		}
+		
+		@include breakpoint(wide) {
+			font-size: 3.8em;
+		}
+		
+		@include breakpoint(desktop) {
+			font-size: 3.9em;
+		}
+		
+		@include breakpoint(laptop) {
+			font-size: 4.1em;
+		}
+		
+		@include breakpoint(large-desktop) {
+			font-size: 4.3em;
+		}
+
+		sup {
+			font-size: 25%;
+			text-transform: uppercase;
+			top: -2.1em;
+			margin-right: 4px;
+		}
+
+		sub {
+			font-size: 56%;
+			text-transform: uppercase;
+			bottom: 0;
+			margin-left: 4px;
+		}
+
+		+ .button {
+			margin-top: 16px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.search-property {
+		width: calc(100% - 32px);
+		margin: 0 auto;
+		padding: 20vh 0;
+		// position: absolute;
+		// z-index: 2;
+		// top: 50%;
+		// bottom: initial;
+		// left: 50%;
+		// right: initial;
+		// transform: translate(-50%, -50%);
+	
+		// @include breakpoint(mobile-iphone) {
+		// 	top: 40%;
+		// }
+	
+		// @include breakpoint(small-mobile) {
+		// 	top: 36%;
+		// }
+	
+		@include breakpoint(tablet) {
+			width: 70%;
+		}
+	
+		@include breakpoint(wide) {
+			width: 50%;
+			// top: 46%;
+			padding: 30vh 0;
+		}
+
+		.advance-area {
+			position: absolute;
+			top: 100%;
+			bottom: initial;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.button {
+		&.white {
+			&:hover {
+				color: $gold;
+				// border-color: #c09e49;
+				// background-color: #c09e49;
+				// color: #fff;
+			}
+		}
+	}
+}
+
+.wording  {
+	h3 {
+		color: $title-color;
+		font-size: 1.7em;
+		
+		@include breakpoint(small-mobile) {
+			font-size: 1.6em;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 2.4em;
+		}
+
+		@include breakpoint(wide) {
+			font-size: 2.2em;
+		}
+
+		+ p {
+			margin-top: 20px;
+		}
+	}
+
+	p {
+		@include breakpoint(tablet) {
+			font-size: 1.5em;
+		}
+	}
+}
+
+.agents {
+	.agent-list {
+		.row {
+			@include breakpoint(mobile) {
+				margin-right: -7px;
+				margin-left: -7px;
+			}
+		}
+
+		.col-6  {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			
+			@include breakpoint(mobile) {
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+			
+			@include breakpoint(wide) {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	.image-area {
+		.images {
+			display: block;
+			width: 100%;
+			height: 0;
+			padding: 0 0 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border-radius: 8px;
+			box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
+			transition: $transition-base;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		+ .name-area {
+			margin-top: 8px;
+		}
+	}
+
+	.name-area {
+		h5 {
+			font-size: 1.1em;
+			color: $title-color;
+			
+			@include breakpoint(small-mobile) {
+				font-size: 1em;
+			}
+			
+			@include breakpoint(tablet) {
+				font-size: 1.2em;
+			}
+
+			+ p {
+				margin-top: 8px;
+			}
+		}
+
+		p {
+			font-size: 0.8em;
+			font-style: italic;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.9em;
+			}
+		}
+
+		+ .contact-area {
+			margin-top: 10px;
+		}
+	}
+
+	ul {
+		&.contact-area {
+			padding: 0;
+
+			li {
+				margin: 0;
+
+				+ li {
+					margin-left: 2px;
+				}
+			}
+		}
+	}
+
+	.contact-list {
+		a {
+			font-size: 1.4em;
+			line-height: 34px;
+			color: $white;
+			display: block;
+			width: 34px;
+			height: 34px;
+			opacity: 0.4;
+			background-color: $button-background;
+			border-radius: 100%;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					opacity: 1;
+					background-color: $gold;
+				}
+			}
+		}
+	}
+}
+
+.projects {
+	.slide-image {
+		transition: $transition-base;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				transform: scale(1.05);
+			}
+		}
+
+		+ .slide-info {
+			margin-top: 16px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	.images {
+		width: 100%;
+		height: 0;
+		padding: 0 0 66.6%;
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 8px;
+		box-shadow: 2px 4px 30px rgba(0,0,0,0.2);
+
+	}
+
+	.city {
+		font-size: 0.8em;
+		
+		@include breakpoint(tablet) {
+			font-size: 1.1em;
+		}
+		
+		@include breakpoint(wide) {
+			font-size: 1em;
+		}
+
+		span {
+			margin-right: 4px;
+			
+			@include breakpoint(tablet) {
+				margin-right: 6px;
+			}
+		}
+
+
+		+ .title {
+			margin-top: 6px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 8px;
+			}
+		}
+	}
+
+	.title {
+		font-size: 1.3em;
+		color: $title-color;
+
+		@include breakpoint(tablet) {
+			font-size: 1.6em;
+		}
+
+		+ .startfrom {
+			margin-top: 10px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 12px;
+			}
+		}
+	}
+
+	.startfrom {
+		font-size: 0.8em;
+		font-style: italic;
+		
+		@include breakpoint(tablet) {
+			font-size: 1em;
+		}
+
+		+ .price {
+			margin-top: 6px;
+		}
+	}
+
+	.price {
+		font-size: 2.9em;
+		text-transform: uppercase;
+		line-height: 100%;
+		color: $green;
+		
+		@include breakpoint(tablet) {
+			font-size: 3.1em;
+		}
+		
+		@include breakpoint(desktop) {
+			font-size: 3.2em;
+		}
+
+		sup {
+			font-size: 25%;
+			text-transform: uppercase;
+			top: -2.1em;
+			margin-right: 4px;
+		}
+
+		sub {
+			font-size: 56%;
+			text-transform: uppercase;
+			bottom: 0;
+			margin-left: 4px;
+		}
+
+		+ .button {
+			margin-top: 16px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.join-team {
+	.wrapper {
+		position: relative;
+		padding: 30px 16px;
+	}
+
+	.shape {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: $gold;
+		border-radius: 8px;
+	
+		@include breakpoint(wide) {
+			top: 50%;
+			bottom: initial;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 320px;
+			margin-top: -160px;
+			border-radius: 180px;
+			transform: rotate(-5deg);
+		}
+
+		@include breakpoint(desktop) {
+			margin-top: -165px;
+			height: 330px;
+		}
+	}
+
+	h3 {
+		color: $white;
+		font-size: 1.8em;
+		
+		@include breakpoint(mobile-iphone) {
+			font-size: 1.6em;
+		}
+
+		@include breakpoint(tablet) {
+			font-size: 2.2em;
+		}
+
+		@include breakpoint(desktop) {
+			font-size: 2.4em;
+		}
+
+		+ p {
+			margin-top: 20px;
+		}
+	}
+
+	p {
+		color: #ede5cf;
+		font-size: 1em;
+
+		@include breakpoint(tablet) {
+			font-size: 1.3em;
+		}
+
+		+ .button {
+			margin-top: 30px;
+		}
+	}
+
+	.button {
+		background-color: $semi-dark-gold;
+		border-color: $semi-dark-gold;
+
+		&:hover {
+			background-color: $white;
+			border-color: $white;
+			color: $gold;
+		}
+	}
+}
+
+
+
+
+
+

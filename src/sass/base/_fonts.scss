@@ -1,0 +1,103 @@
+@import 'variables';
+
+// Font Family Ex. (name, 'fonts/path')
+$font_family: (
+	montserrat_regular: '#{$font-path}/montserrat/montserrat-regular',
+	montserrat_medium: '#{$font-path}/montserrat/montserrat-medium',
+	montserrat_bold: '#{$font-path}/montserrat/montserrat-bold',
+	montserrat_extrabold: '#{$font-path}/montserrat/montserrat-extrabold',
+);
+
+
+@each $name, $file in $font_family {
+	@if $font_idx==1 {
+		$font_default: $name;
+		$font_idx: 2;
+	}
+
+	@font-face {
+		font-family: $name;
+		src: url('#{$file}.eot');
+		src:
+			url('#{$file}.eot') format('embedded-opentype'),
+			url('#{$file}.woff2') format('woff2'),
+			url('#{$file}.woff') format('woff'), 
+			url('#{$file}.ttf') format('truetype'),
+			url('#{$file}.svg#{$name}') format('svg');
+	}
+}
+
+
+
+// @font-face {
+// 	font-family: "Museo Sans 300";
+// 	font-style: normal;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_300.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_300.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_300.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300.svg') format('svg');
+// }
+
+// @font-face {
+// 	font-family: "Museo Sans 300";
+// 	font-style: italic;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_300italic.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_300italic.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300italic.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300italic.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_300italic.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_300italic.svg') format('svg');
+// }
+
+// @font-face {
+// 	font-family: "Museo Sans 500";
+// 	font-style: normal;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_500.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_500.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_500.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500.svg') format('svg');
+// }
+
+// @font-face {
+// 	font-family: "Museo Sans 500";
+// 	font-style: italic;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_500_italic.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_500_italic.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500_italic.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500_italic.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_500_italic.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_500_italic.svg') format('svg');
+// }
+
+// @font-face {
+// 	font-family: "Museo Sans 700";
+// 	font-style: normal;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_700.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_700.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_700.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_700.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_700.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_700.svg') format('svg');
+// }
+
+// @font-face {
+// 	font-family: "Museo Sans 900";
+// 	font-style: normal;
+// 	src: url('#{$fonts-path}/museo-sans/museosans_900.eot');
+// 	src:
+// 		url('#{$fonts-path}/museo-sans/museosans_900.eot') format('embedded-opentype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_900.woff2') format('woff2'),
+// 		url('#{$fonts-path}/museo-sans/museosans_900.woff') format('woff'), 
+// 		url('#{$fonts-path}/museo-sans/museosans_900.ttf') format('truetype'),
+// 		url('#{$fonts-path}/museo-sans/museosans_900.svg') format('svg');
+// }
+
