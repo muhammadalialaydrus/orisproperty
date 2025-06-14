@@ -597,8 +597,8 @@
 					width: 100%;
 					height: 0;
 					padding: 0 0 125%;
-					overflow: hidden;
-					border-top-right-radius: 70px;
+					// overflow: hidden;
+					// border-top-right-radius: 70px;
 				}
 
 				.images {
@@ -612,6 +612,7 @@
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: cover;
+					border-top-right-radius: 70px;
 				}
 
 				+ .image-thumb {
@@ -629,7 +630,10 @@
 						&:last-child {
 							.image-area {
 								figure {
-									overflow: hidden;
+									// overflow: hidden;
+								}
+
+								.images {
 									border-bottom-right-radius: 70px;
 								}
 							}
@@ -849,7 +853,7 @@
 					display: flex;
 					flex-wrap: wrap;
 					align-items: center;
-					gap: 10px;
+					// gap: 10px;
 				}
 
 				.profile-picture {
@@ -857,8 +861,7 @@
 						position: relative;
 						width: 80px;
 						height: 80px;
-						overflow: hidden;
-						border-radius: 100%;
+						// overflow: hidden;
 					}
 
 					.images {
@@ -872,6 +875,11 @@
 						background-position: center;
 						background-repeat: no-repeat;
 						background-size: cover;
+						border-radius: 100%;
+					}
+
+					+ .name-number {
+						margin-left: 10px;
 					}
 				}
 
@@ -970,6 +978,7 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
+			overflow: hidden;
 		}
 	}
 }
