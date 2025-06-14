@@ -8,7 +8,6 @@
 	}
 
 	.image-area {
-		opacity: 0.4;
 		border-radius: 8px;
 		box-shadow: 2px 4px 20px rgba(0,0,0,0.15);
 		transition: $transition-base;
@@ -23,7 +22,12 @@
 	.swiper-slide {
 		&.swiper-slide-active {
 			.image-area {
-				opacity: 1;
+				figure {
+					&:before {
+						background-color: transparent;
+						pointer-events: none;
+					}
+				}
 			}
 		}
 	}
@@ -46,6 +50,20 @@
 		height: 0;
 		padding: 0 0 66.6%;
 		padding: 0 0 120%;
+
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($white, 0.8);
+			transition: all 0.3s linear;
+		}
 
 		img {
 			position: absolute;

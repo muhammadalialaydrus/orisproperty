@@ -37,6 +37,11 @@ var paths = {
 		output: 'dist/css',
 		lint: 'src/sass/**/*.s+(a|c)ss'
 	},
+	flyerSass: {
+		input: 'src/sass/flyerpdf.scss',
+		output: 'dist/css',
+		lint: 'src/sass/**/*.s+(a|c)ss'
+	},
 	bootstrap: {
 		popper: 'node_modules/popper.js/dist/umd/popper.min.js',
 		js: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
@@ -123,10 +128,36 @@ gulp.task('css', function (done) {
 });
 
 /**
+ * CSS
+ */
+gulp.task('cssFlyer', function (done) {
+	return gulp.src(paths.flyerSass.input)
+	.pipe(plumber({ errorHandler: onError }))
+	.pipe(sourcemaps.init())
+	.pipe(sassGlob())
+	.pipe(sass({ outputStyle: 'compressed' }))
+	.pipe(autoprefixer('last 2 versions'))
+	.pipe(sourcemaps.write('./', {addComment: false}))
+	.pipe(gulp.dest(paths.flyerSass.output))
+	.pipe(browserSync.reload({stream:true}))
+	done();
+});
+
+/**
  * Sass Lint
  */
 gulp.task('sass-lint', function () {
 	return gulp.src(paths.sass.lint)
+	.pipe(sassLint())
+	.pipe(sassLint.format())
+	.pipe(sassLint.failOnError())
+});
+
+/**
+ * eFlyer Sass Lint
+ */
+gulp.task('sass-lint', function () {
+	return gulp.src(paths.flyerSass.lint)
 	.pipe(sassLint())
 	.pipe(sassLint.format())
 	.pipe(sassLint.failOnError())
@@ -273,6 +304,9 @@ gulp.task('watch-files', function () {
 	watch(paths.sass.inputAll, function () {
 		gulp.start('css');
 	});
+	watch(paths.sass.inputAll, function () {
+		gulp.start('cssFlyer');
+	});
 	watch(paths.js.input, function () {
 		gulp.start('js:main');
 	});
@@ -306,6 +340,7 @@ gulp.task('default', function(done) {
 gulp.task('build', function (done) {
 	runSequence([
 		'css',
+		'cssFlyer',
 		'js:bootstrap',
 		'js:vendor',
 		'js:main',
