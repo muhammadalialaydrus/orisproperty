@@ -4,11 +4,13 @@
  */
 
 // Bootstrap and its default variables
-@import "node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap-reboot";
+@import "node_modules/bootstrap/scss/bootstrap-grid";
 
 // Vendor
-@import "vendor/bootstrap";
-@import 'vendor/normalize';
+// @import "vendor/bootstrap";
+// @import 'vendor/normalize';
 
 // Fontawesome
 @import 'vendor/font-awesome/fontawesome';
