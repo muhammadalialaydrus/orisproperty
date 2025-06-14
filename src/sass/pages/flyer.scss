@@ -705,14 +705,13 @@
 
 				.spec-lis {
 					padding: 0;
-					list-style: none;
-					display: flex;
-					flex-wrap: wrap;
+					// list-style: none;
+					// display: flex;
+					// flex-wrap: wrap;
 
 					li {
 						margin: 0;
 						width: 50%;
-						color: #aab3c4;
 						-webkit-box-flex: 0;
 						flex: 0 0 50%;
 						max-width: 50%;
@@ -724,6 +723,7 @@
 						flex-wrap: wrap;
 						align-items: center;
 						padding: 10px 5px;
+						color: #aab3c4;
 					}
 
 					.icon {
