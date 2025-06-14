@@ -705,16 +705,27 @@
 
 				.spec-lis {
 					padding: 0;
-					// list-style: none;
+					list-style: none;
 					// display: flex;
 					// flex-wrap: wrap;
+					display: table;
+
+					&::after {
+						clear: both;
+					}
+
+					&::before {
+						display: table;
+						content: " ";
+					}
 
 					li {
 						margin: 0;
 						width: 50%;
-						-webkit-box-flex: 0;
-						flex: 0 0 50%;
-						max-width: 50%;
+						// -webkit-box-flex: 0;
+						// flex: 0 0 50%;
+						// max-width: 50%;
+						float: left;
 					}
 
 					.wrapper-desc {
