@@ -192,13 +192,26 @@
 				.spec-lis {
 					padding: 0;
 					list-style: none;
-					display: flex;
-					flex-wrap: wrap;
+					// display: flex;
+					// flex-wrap: wrap;
+					display: table;
+
+					&::after {
+						clear: both;
+					}
+
+					&::before {
+						display: table;
+						content: " ";
+					}
 
 					li {
 						margin: 0;
 						width: 50%;
-						padding: 10px 5px;
+						// -webkit-box-flex: 0;
+						// flex: 0 0 50%;
+						// max-width: 50%;
+						float: left;
 					}
 
 					.wrapper-desc {
@@ -206,6 +219,7 @@
 						display: flex;
 						flex-wrap: wrap;
 						align-items: center;
+						padding: 10px 5px;
 					}
 
 					.icon {
@@ -299,12 +313,37 @@
 				padding-right: 30px;
 
 				.facility-list {
-					margin: 0 -10px;
+					display: table;
+					width: 100%;
+					list-style: none;
+					padding: 0;
+
+					&::after {
+						clear: both;
+					}
+
+					&::before {
+						display: table;
+						content: " ";
+					}
+
+					li {
+						width: 50%;
+						float: left;
+					}
 
 					[class*='col-'] {
 						padding: 0 10px;
 					}
 				}
+
+				// .facility-list {
+				// 	margin: 0 -10px;
+
+				// 	[class*='col-'] {
+				// 		padding: 0 10px;
+				// 	}
+				// }
 
 				.subtitle {
 					font-size: 1.6em;
@@ -348,8 +387,7 @@
 					width: 100%;
 					height: 0;
 					padding: 0 0 66.6%;
-					overflow: hidden;
-					border-radius: 10px;
+					// overflow: hidden;
 				}
 
 				.images {
@@ -363,6 +401,7 @@
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: cover;
+					border-radius: 10px;
 				}
 
 				+ .contact-area {
@@ -399,7 +438,7 @@
 					display: flex;
 					flex-wrap: wrap;
 					align-items: center;
-					gap: 10px;
+					// gap: 10px;
 				}
 
 				.profile-picture {
@@ -407,8 +446,6 @@
 						position: relative;
 						width: 80px;
 						height: 80px;
-						overflow: hidden;
-						border-radius: 100%;
 					}
 
 					.images {
@@ -422,6 +459,11 @@
 						background-position: center;
 						background-repeat: no-repeat;
 						background-size: cover;
+						border-radius: 100%;
+					}
+
+					+ .name-number {
+						margin-left: 10px;
 					}
 				}
 
