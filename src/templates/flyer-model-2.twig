@@ -9,7 +9,9 @@
 		<meta name="robots" content="index, follow" />
 		<title>{{ head_title }} • Oris Property</title>
 		<meta name="description" content="PT. Oris Haza Propertindo Real Estate Agent in South Jakarta.">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		{# <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> #}
+		<meta name="viewport" content="width=1140">
+		<meta name="format-detection" content="telephone=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="twitter:card" content="summary_large_image"/>
 		<meta name="twitter:site" content="@aliaraaab"/>
@@ -38,13 +40,8 @@
 		<link rel="stylesheet" href="css/flyerpdf.css">
 	</head>
 	<body>
-		<main class="no-padding">
+		<main id="target" class="no-padding">
 			<!-- ====================== Ambil dari sini ====================== -->
-			{# <div class="legal">
-				<figure>
-					<img src="assets/img/graphics/legal.png">
-				</figure>
-			</div> #}
 			<div class="flyer model-2">
 				<div class="flyer-box">
 					<div class="flyer-content">
@@ -284,8 +281,26 @@
 			</div>
 			<!-- ====================== End ====================== -->
 		</main>
-		<script src="js/vendor.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/main.min.js"></script>
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+		<script>
+			function capture() {
+				html2canvas(document.querySelector("#target"), {
+					width: 1140, windowWidth: 1140
+				}).then(canvas => {
+				const img = canvas.toDataURL("image/png");
+
+				// Langsung download otomatis
+				const link = document.createElement('a');
+				link.download = 'eflyer.png';
+				link.href = img;
+				link.click();
+				});
+			}
+
+			// Auto-trigger jika ada query ⁠ ?capture=1 ⁠
+			if (new URLSearchParams(window.location.search).get("capture") === "1") {
+				window.onload = () => setTimeout(capture, 500); // Delay agar halaman benar-benar siap
+			}
+		</script>
 	</body>
 </html>
