@@ -2194,6 +2194,11 @@ body {
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+		gap: 6px;
+		
+		@include breakpoint(tablet) {
+			gap: 10px;
+		}
 	}
 
 	.profile-pic {
@@ -2216,13 +2221,13 @@ body {
 			}
 		}
 
-		+ .name-area {
-			margin-left: 6px;
+		// + .name-area {
+		// 	margin-left: 6px;
 
-			@include breakpoint(tablet) {
-				margin-left: 10px;
-			}
-		}
+		// 	@include breakpoint(tablet) {
+		// 		margin-left: 10px;
+		// 	}
+		// }
 	}
 
 	.name-area {
@@ -2230,15 +2235,15 @@ body {
 		flex-basis: 0;
 		-ms-flex-positive: 1;
 		flex-grow: 1;
-		max-width: 56%;
+		max-width: 53%;
 		
 		
 		@include breakpoint(mobile-iphone) {
-			max-width: 50%;
+			max-width: 49%;
 		}
 		
 		@include breakpoint(small-mobile) {
-			max-width: 48%;
+			max-width: 47%;
 		}
 
 		@include breakpoint(tablet) {
@@ -2286,18 +2291,19 @@ body {
 			}
 		}
 
-		+ .button-area {
-			margin-left: 6px;
+		// + .button-area {
+		// 	margin-left: 6px;
 			
-			@include breakpoint(tablet) {
-				margin-left: 10px;
-			}
-		}
+		// 	@include breakpoint(tablet) {
+		// 		margin-left: 10px;
+		// 	}
+		// }
 	}
 
 	.button-area {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 4px;
 	}
 
 	.button-list {
@@ -2325,9 +2331,9 @@ body {
 			}
 		}
 
-		+ .button-list {
-			margin-left: 4px;
-		}
+		// + .button-list {
+		// 	margin-left: 4px;
+		// }
 	}
 
 	.icon-button {
