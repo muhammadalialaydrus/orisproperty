@@ -185,7 +185,7 @@ body {
 				}
 
 				p {
-					font-size: 0.9em;
+					// font-size: 0.9em;
 
 					span {
 						color: #fff;
@@ -685,7 +685,7 @@ body {
 					margin: 0 -10px;
 					
 					[class*='col-'] {
-						padding: 0 10px;
+						padding: 10px;
 
 						&:last-child {
 							.image-area {
@@ -732,7 +732,7 @@ body {
 
 			.title-area {
 				p {
-					font-size: 0.9em;
+					// font-size: 0.9em;
 
 					span {
 						color: #fff;
@@ -1350,7 +1350,7 @@ body {
 				}
 
 				p {
-					font-size: 0.9em;
+					// font-size: 0.9em;
 					color: #aab3c4;
 
 					span {
@@ -1730,20 +1730,20 @@ body {
 
 	.flyer-box {
 		position: relative;
-		height: 0;
-		padding: 0 0 141.38%;
+		// height: 0;
+		// padding: 0 0 141.38%;
 		// padding: 0 0 164.6%;
 		background-color: #fff;
 		min-height: 1612px;
 
 		.flyer-content {
 			min-height: 1612px;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			overflow: hidden;
+			// position: absolute;
+			// top: 0;
+			// bottom: 0;
+			// left: 0;
+			// right: 0;
+			// overflow: hidden;
 		}
 	}
 }
