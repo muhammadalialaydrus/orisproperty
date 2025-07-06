@@ -641,7 +641,7 @@ body {
 					box-shadow: none;
 					width: 100px;
 					height: 100px;
-					background-color: $yellow;
+					background-color: $semi-orange;
 				}
 			}
 
@@ -732,12 +732,21 @@ body {
 
 			.title-area {
 				p {
-					// font-size: 0.9em;
+					font-size: 1.6em;
+					color: $white;
+					// color: $yellow;
+					display: flex;
+					align-items: flex-start;
+					gap: 10px;
 
 					span {
-						color: #fff;
-						margin-right: 4px;
+						// color: #fff;
+
+						&.icon {
+							margin-top: 4px;
+						}
 					}
+
 
 					+ h3 {
 						padding-top: 30px;
@@ -749,6 +758,23 @@ body {
 				h3 {
 					font-size: 2.6rem;
 					color: $white;
+					// color: $yellow;
+					display: flex;
+					align-items: flex-start;
+					gap: 16px;
+
+					span {
+						&.icon {
+							margin-top: 6px;
+							font-size: 0.8em;
+						}
+					}
+
+					+ p {
+						padding-top: 30px;
+						border-top: 1px solid #485561;
+						margin-top: 30px;
+					}
 				}
 
 				+ .spec-area {
@@ -1347,16 +1373,35 @@ body {
 				h3 {
 					font-size: 2.6rem;
 					color: $white;
+					display: flex;
+					align-items: flex-start;
+					gap: 16px;
+
+					span {
+						&.icon {
+							margin-top: 6px;
+							font-size: 0.8em;
+						}
+					}
+
+					+ p {
+						margin-top: 16px;
+					}
 				}
 
 				p {
-					// font-size: 0.9em;
+					font-size: 1.6em;
+					display: flex;
+					align-items: flex-start;
+					gap: 10px;
 					color: #aab3c4;
 
 					span {
-						color: $white;
-						margin-right: 4px;
+						&.icon {
+							margin-top: 4px;
+						}
 					}
+
 
 					+ h3 {
 						margin-top: 16px;
